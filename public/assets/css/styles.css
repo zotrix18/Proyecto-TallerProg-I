@@ -1,0 +1,84 @@
+.img-style{
+    
+    min-width: 90%;
+}
+
+.titulo{
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    
+}
+
+.subtitulo{
+    color: white;
+    font-size: 2vw;
+    font-style: italic;
+    text-align: center;
+}
+
+#color-changing-text {
+    animation: color-change 3s infinite;
+  }
+  
+  @keyframes color-change {
+    0% { color: red; }
+    20%{ color: white;}
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    85% {color: black;}
+    100% { color: purple; }
+}
+
+.secundario{
+    margin-top: 2%;
+    font-size: 3vw;
+}
+
+.separador{
+    background-color: rgb(53, 34, 179);
+    height: 30px; 
+    margin: 50px 0 50px 0;
+}
+
+.dropdown-toggle{
+     float: right;
+}
+
+.bg-logo{
+    background-color: rgb(246,254,255);
+}
+
+.navbar-custom2{
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.introducing-left, .introducing-right{
+    text-align: justify;
+    max-width: 50vw;
+    align-items: center;    
+    padding-left: 20vw;
+    max-width: 80%;
+}
+
+#contacto{
+    background-color: rgb(88, 88, 244);
+}
+
+.redes, .sitios{
+    /* padding-left: 20%; */
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+
+}
+
+.redes a, .sitios a{
+    padding-bottom: 10px;
+    color:black;
+    text-decoration: none;
+}
+
