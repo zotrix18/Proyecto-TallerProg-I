@@ -86,3 +86,13 @@
     color:rgb(88, 88, 244) !important;
 }
 
+.card-img-top {
+    transition: transform 0.5s ease;
+  }
+  
+  .card-img-top:hover {
+    transform: scale(1.2);
+  }
+  
+  
+

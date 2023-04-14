@@ -98,7 +98,7 @@
           </div>
           <div class="col-sm-6 col-lg-3 mb-4">
             <div class="card">
-              <img src="assets/img/tipo4.jpeg" class="card-img-top img-custom" alt="...">
+              <img src="assets/img/tipo4.jpeg" class="card-img-top img-custom" alt="tipo4">
             </div>
           </div>
   </section>
