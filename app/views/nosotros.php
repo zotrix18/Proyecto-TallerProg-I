@@ -146,29 +146,30 @@
           </li>
         </ul>
         <br>
-        <h3>Lo que valoramos</h3>
+        <div class="text-center texto-azul">
+          <h3>Lo que valoramos</h3>
 
-          <p class="text-blue">Personas<br>
-          Creemos en las personas.</p>
+            <p class="text-blue">Personas<br>
+            Creemos en las personas.</p>
 
-          <p class="text-blue">Calidad <br>
-          Tenemos el objetivo de destacarnos y un compromiso de calidad con quienes nos eligen.</p>
-       
-          <p class="text-blue">Innovacion <br>
-          Trabajamos para desarrollar los productos del futuro y seguir creciendo.</p>
-       
-          <p class="text-blue">Sostenibilidad <br>
-          Buscamos el crecimiento sostenible y la longevidad de nuestro negocio.</p>
+            <p class="text-blue">Calidad <br>
+            Tenemos el objetivo de destacarnos y un compromiso de calidad con quienes nos eligen.</p>
         
-          <p class="text-blue">Clientes <br>
-          Creemos que nuestro éxito depende tambipen del de nuestros clientes.</p>
+            <p class="text-blue">Innovacion <br>
+            Trabajamos para desarrollar los productos del futuro y seguir creciendo.</p>
         
-          <p class="text-blue">Integridad <br>
-          Actuamos según nuestros valores y principios.</p>
-        
-          <p class="text-blue">Persistencia <br>
-          Trabajamos incansablemente en la superación de los desafíos</p>
-        
+            <p class="text-blue">Sostenibilidad <br>
+            Buscamos el crecimiento sostenible y la longevidad de nuestro negocio.</p>
+          
+            <p class="text-blue">Clientes <br>
+            Creemos que nuestro éxito depende tambipen del de nuestros clientes.</p>
+          
+            <p class="text-blue">Integridad <br>
+            Actuamos según nuestros valores y principios.</p>
+          
+            <p class="text-blue">Persistencia <br>
+            Trabajamos incansablemente en la superación de los desafíos</p>
+        </div>
         
       </section>
       <div class="separador" id="zona-4"></div>
@@ -182,6 +183,9 @@
           </div>
         <p><strong>Vision:</strong>
           Ser una empresa líder en el mercado de la energía, reconocida por su excelencia en el desempeño, su compromiso con la innovación y la responsabilidad social y ambiental, y su capacidad para ofrecer soluciones integrales que satisfagan las necesidades de nuestros clientes en todo el mundo</p>
+          <div class="text-center">
+            <img src="./assets/img/liderazgo.jpeg" class="w-25" alt="Battery-eco">
+          </div>
       </section>
     
     </div>
