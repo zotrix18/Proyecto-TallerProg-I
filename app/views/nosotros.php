@@ -25,7 +25,7 @@
     </nav>
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2"  data-bs-offset="50" class="scrollspy-example" tabindex="0">
     <br>
-      <section class="introducing-left" id="scrollspyHeading1">
+      <section class="introducing" id="scrollspyHeading1">
         <div id="zona-1"></div>
         <h4 class="text-center subtitle">Trayectoria</h4>
         <p>Con más de una década de experiencia en el mercado, hemos logrado consolidarnos como líderes en la industria y ofrecer a nuestrosvariedad de productos y servicios de calidad.</p>
@@ -39,7 +39,7 @@
       </section>
       <div class="separador" id="zona-2"></div>
 
-      <section class="introducing-right " id="scrollspyHeading2">
+      <section class="introducing" id="scrollspyHeading2">
         <h4 class="text-center subtitle">Innovacion</h4>
         <p>Uno de los aspectos más importantes de nuestra trayectoria ha sido nuestra capacidad para adaptarnos a los cambios del mercado. A medida que surgían nuevas tecnologías y tendencias, nos enfocamos en estar a la vanguardia de la industria para poder ofrecer a nuestros clientes las últimas novedades y avances en materia de baterías.</p>
         <p>En Electro Voltaics compartimos una filosofía centrada en la satisfacción de nuestros clientes y contamos con una visión de mercado que impulsa nuestro proceso de mejora continua y crecimiento empresarial a través de la innovación en nuestros productos. Miles de clientes internos y externos participan en nuestros procesos de desarrollo, producción, comercialización, aplicación y asistencia técnica, lo que nos permite ser reconocidos como una marca líder por nuestros consumidores.</p>
@@ -74,7 +74,7 @@
         </div>
       </section>
       <div class="separador" id="zona-3"></div>
-      <section class="introducing-left" id="scrollspyHeading3">
+      <section class="introducing" id="scrollspyHeading3">
         <h4 class="text-center subtitle">Cultura Empresarial</h4>
         <ul>
           <li>
@@ -125,7 +125,7 @@
         </div>       
       </section>
       <div class="separador" id="zona-4"></div>
-      <section class="introducing-right" id="scrollspyHeading4">
+      <section class="introducing" id="scrollspyHeading4">
         <h4 class="text-center subtitle">Mision y Vision</h4>
         <p><strong>Mision:</strong>
           En Electro Voltaics, nos dedicamos a desarrollar soluciones innovadoras y de alta calidad en el campo de la energía, con un enfoque en la satisfacción del cliente, la responsabilidad social y ambiental, y la excelencia en el desempeño. Trabajamos en equipo con nuestros clientes, proveedores y colaboradores para ofrecer productos y servicios que contribuyan al bienestar de la sociedad y al cuidado del medio ambiente</p>

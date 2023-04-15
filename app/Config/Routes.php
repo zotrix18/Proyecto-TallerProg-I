@@ -32,7 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/nosotros', 'Home::nosotros');
 $routes->get('/comercializacion', 'Home::comercializacion');
-$routes->get('/tyc', 'Home::terminosycondiciones');
+$routes->get('/tyc', 'Home::terminos');
 $routes->get('/contacto', 'Home::contacto');
 $routes->get('/enConstruccion', 'Home::construccion');
 

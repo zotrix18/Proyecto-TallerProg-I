@@ -65,7 +65,7 @@ body{
     backdrop-filter: blur(10px);
 }
 
-.introducing-left, .introducing-right{
+.introducing{
     text-align: justify;
     max-width: 50vw;
     align-items: center;    
@@ -110,4 +110,14 @@ body{
   
 #scrollspyHeading4 > p{
     padding-top: 3%;
+}
+
+.tyc-h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.introducing ul li p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }

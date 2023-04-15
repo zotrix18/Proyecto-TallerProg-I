@@ -1,69 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electro Voltaics S.A.</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity=" " crossorigin="">
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid" >
-    <a class="navbar-brand" href="#">Electro Voltaics</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/principal.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacto">Links</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Mas Opciones
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/nosotros.html">Sobre Nosotros</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/clientes.html">Nuestros clientes</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/productos.html">Productos</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/productos.html">Terminos y Condiciones</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</head>
+<?php require('header.php')?> 
 <body>
-
-</body>
-<footer>
-    <div class="container-fluid" id="contacto">
-      <h1 class="text-center">Contacto</h1>
-      <div class="row">
-        <div class="col-md-6 redes">
-          <h4>Redes Sociales</h4>
-          <a class="anchorSeparador" href="http://www.facebook.com">Facebook <img src="assets/svg/facebook.svg" alt="faceLogo"></img></a>
-          
-          <a class="anchorSeparador" href="http://www.instagram.com">Instagram <img src="assets/svg/instagram.svg" alt="faceLogo"></img></a>
-          
-          <a class="anchorSeparador" href="http://www.whatsapp.com">Whatsapp <img src="assets/svg/whatsapp.svg" alt="faceLogo"></img></a>
-        </div>
-        <div class="col-md-6 sitios">
-          <h4>Sitios de importancia</h4>
-          <a class="anchorSeparador-2" href="/principal.html">Home</a>
-          <a class="anchorSeparador-2" href="/nosotros.html">Sobre Nosotros</a>
-          <a class="anchorSeparador-2" href="/clientes.html">Nuestros clientes</a>
-          <a class="anchorSeparador-2" href="/productos.html">Productos</a>
-          <a class="anchorSeparador-2" href="/tyc.html">Terminos y Condiciones</a>
-        </div>
-      </div>
-  </div>
-</footer>
-</html>
+<div class="introducing py-3 my-3">
+  <h2 class="text-center tyc-h2">Terminos y Condiciones</h2>
+  <ul>
+    <li><p>1.-<strong>Productos:</strong> Todos los productos de ElectroVoltaics son fabricados bajo los más altos estándares de calidad, sin embargo, no se garantiza que los productos serán libres de defectos o errores en todo momento.</p></li>
+    <li><p>2.-<strong>Precios:</strong> Todos los precios están sujetos a cambios sin previo aviso. ElectroVoltaics se reserva el derecho de modificar los precios en cualquier momento.</p></li>
+    <li><p>3.-<strong>Pedidos:</strong> Los pedidos realizados por los clientes están sujetos a la aprobación de ElectroVoltaics. ElectroVoltaics se reserva el derecho de rechazar cualquier pedido que considere inapropiado.</p></li>
+    <li><p>4.-<strong>Envío:</strong> Los plazos de envío son estimados y no garantizados. ElectroVoltaics no será responsable de los retrasos en la entrega causados por factores fuera de su control, como los desastres naturales, las huelgas, el mal tiempo o cualquier otra circunstancia imprevista.</p></li>
+    <li><p>5.-<strong>Garantía:</strong> ElectroVoltaics garantiza que sus productos estarán libres de defectos de fabricación durante un período de tiempo determinado. La garantía no cubre los daños causados por un uso inadecuado o negligente del producto.</p></li>
+    <li><p>6.-<strong>Devoluciones:</strong> Los productos comprados a ElectroVoltaics pueden ser devueltos en un plazo determinado. Los clientes son responsables de pagar los gastos de envío y manejo asociados con las devoluciones.</p></li>
+    <li><p>7.-<strong>Privacidad:</strong> ElectroVoltaics se compromete a proteger la privacidad de sus clientes. La información personal del cliente no será compartida con terceros sin el consentimiento del cliente.</p></li>
+    <li><p>8.-<strong>Propiedad intelectual:</strong> Todos los derechos de propiedad intelectual, incluyendo los derechos de autor, marcas comerciales y patentes, pertenecen a ElectroVoltaics.</p></li>
+    <li><p>9.-<strong>Ley aplicable:</strong> Estos términos y condiciones se rigen por las leyes del país donde se encuentra la sede de ElectroVoltaics.</p></li>
+    <li><p>10.-<strong>Responsabilidad:</strong> ElectroVoltaics no será responsable de los daños directos, indirectos, incidentales, especiales o consecuentes que surjan de la compra, el uso o la incapacidad de uso de los productos de ElectroVoltaics.</p></li>
+    <li><p>11.-<strong>Cambios en los términos y condiciones:</strong> ElectroVoltaics se reserva el derecho de modificar los términos y condiciones en cualquier momento y sin previo aviso. Los cambios serán efectivos en el momento en que se publiquen en el sitio web de ElectroVoltaics.</p></li>
+    <li><p>12.-<strong>Uso adecuado:</strong> Los productos de ElectroVoltaics están diseñados para un uso específico y no deben utilizarse de forma inadecuada o peligrosa. Los clientes son responsables de asegurarse de que utilizan los productos de ElectroVoltaics de forma segura y adecuada.</p></li>
+    <li><p>13.-<strong>Distribución:</strong> Los productos de ElectroVoltaics no pueden ser revendidos sin el consentimiento previo de ElectroVoltaics. La distribución no autorizada de los productos de ElectroVoltaics puede dar lugar a acciones legales.</p></li>
+    <li><p>14.-<strong>Cancelaciones:</strong> Los clientes pueden cancelar un pedido antes de que se haya procesado. Una vez que un pedido ha sido procesado, no se puede cancelar.</p></li>
+    <li><p>15.-<strong>Impuestos y aranceles:</strong> Los precios de los productos de ElectroVoltaics no incluyen los impuestos y aranceles aplicables. Los clientes son responsables de pagar cualquier impuesto o arancel que corresponda.</p></li>
+    <li><p>16.-<strong>Comunicación:</strong> Los clientes pueden comunicarse con ElectroVoltaics a través de los canales de comunicación que se encuentran disponibles en el sitio web de ElectroVoltaics. ElectroVoltaics se reserva el derecho de responder a las comunicaciones en el momento que considere oportuno.</p></li>
+  </ul>
+</div>
+<?php require('footer.php')?> 
