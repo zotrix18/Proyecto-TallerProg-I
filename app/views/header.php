@@ -20,7 +20,7 @@
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a></li>    
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Consultas</a></li>            
-            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Comercializacion</a></li>            
+            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/comercializacion">Comercializacion</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
               </ul>
             </li>

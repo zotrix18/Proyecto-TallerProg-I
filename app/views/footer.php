@@ -15,7 +15,7 @@
           <h4>Sitios de importancia</h4>
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/">Principal</a>
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a>
-          <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/enConstruccion">Catalogo de Productos</a>
+          <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/comercializacion">Catalogo de Productos</a>
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/enConstruccion">Consultas</a>
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/enConstruccion">Comercializacion</a>
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a>
