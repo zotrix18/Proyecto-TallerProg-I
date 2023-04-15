@@ -16,12 +16,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a></li>    
-            <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
-            <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Consultas</a></li>            
-            <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Comercializacion</a></li>            
-            <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
+            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Consultas</a></li>            
+            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Comercializacion</a></li>            
+            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
               </ul>
             </li>
           </ul>

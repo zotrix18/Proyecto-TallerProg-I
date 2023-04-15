@@ -30,12 +30,10 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
-$routes->get('/voltaics', 'Home::electroVolt');
 $routes->get('/nosotros', 'Home::nosotros');
-$routes->get('/productos', 'Home::clientes');
+$routes->get('/comercializacion', 'Home::comercializacion');
 $routes->get('/tyc', 'Home::terminosycondiciones');
-$routes->get('/', 'Home::terminosycondiciones');
+$routes->get('/contacto', 'Home::contacto');
 $routes->get('/enConstruccion', 'Home::construccion');
 
 

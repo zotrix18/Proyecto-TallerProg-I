@@ -122,26 +122,22 @@
           
             <p class="text-blue">Persistencia <br>
             Trabajamos incansablemente en la superación de los desafíos</p>
-        </div>
-        
+        </div>       
       </section>
       <div class="separador" id="zona-4"></div>
       <section class="introducing-right" id="scrollspyHeading4">
         <h4 class="text-center subtitle">Mision y Vision</h4>
-
         <p><strong>Mision:</strong>
           En Electro Voltaics, nos dedicamos a desarrollar soluciones innovadoras y de alta calidad en el campo de la energía, con un enfoque en la satisfacción del cliente, la responsabilidad social y ambiental, y la excelencia en el desempeño. Trabajamos en equipo con nuestros clientes, proveedores y colaboradores para ofrecer productos y servicios que contribuyan al bienestar de la sociedad y al cuidado del medio ambiente</p>
           <div class="text-center">
-            <img src="./assets/img/bateria-eco.png" class="w-25" alt="Battery-eco">
+            <img src="./assets/img/bateria-eco.png" class="w-40" alt="Battery-eco">
           </div>
         <p><strong>Vision:</strong>
           Ser una empresa líder en el mercado de la energía, reconocida por su excelencia en el desempeño, su compromiso con la innovación y la responsabilidad social y ambiental, y su capacidad para ofrecer soluciones integrales que satisfagan las necesidades de nuestros clientes en todo el mundo</p>
           <div class="text-center">
-            <img src="./assets/img/liderazgo.jpeg" class="w-25" alt="Battery-eco">
+            <img src="./assets/img/foto-eco.jpeg" class="w-50" alt="Battery-eco">
           </div>
-      </section>
-    
-    </div>
-    
+      </section>  
+    </div>   
 
 <?php require('footer.php')?>
