@@ -15,27 +15,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="http://electrovoltaics/proyecto_quintana/public/">Principal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacto">Contacto</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Mas Opciones
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="http://electrovoltaics/proyecto_quintana/public/nosotros">Quienes Somos</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Catalogo</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Consultas</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Comercializacion</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
-          </ul>
+      <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a></li>    
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Consultas</a></li>            
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Comercializacion</a></li>            
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
         </li>
       </ul>
     </div>

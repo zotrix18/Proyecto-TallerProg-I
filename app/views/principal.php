@@ -16,25 +16,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#contacto">Contacto</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Mas Opciones
-          </a>
-          <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="http://electrovoltaics/proyecto_quintana/public/nosotros">Quienes Somos</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Catalogo</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Consultas</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Comercializacion</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
-          </ul>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a></li>    
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Consultas</a></li>            
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Comercializacion</a></li>            
+        <li class="nav-item"><a class="nav-link" href="http://localhost//proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
       </ul>
     </div>
   </div>
@@ -118,12 +105,12 @@
         </div>
         <div class="col-sm-12 col-md-6 sitios">
           <h4>Sitios de importancia</h4>
-          <a class="anchorSeparador-2" href="http://electrovoltaics/proyecto_quintana/public/">Principal</a>
-          <a class="anchorSeparador-2" href="http://electrovoltaics/proyecto_quintana/public/nosotros">Quienes Somos</a>
-          <a class="anchorSeparador-2" href="/clientes.html">Catalogo de Productos</a>
-          <a class="anchorSeparador-2" href="/clientes.html">Consultas</a>
-          <a class="anchorSeparador-2" href="/productos.html">Comercializacion</a>
-          <a class="anchorSeparador-2" href="/tyc.html">Terminos y Condiciones</a>
+          <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/">Principal</a>
+          <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a>
+          <a class="anchorSeparador-2" href="http://localhost//proyecto_quintana/public/enConstruccion">Catalogo de Productos</a>
+          <a class="anchorSeparador-2" href="http://localhost//proyecto_quintana/public/enConstruccion">Consultas</a>
+          <a class="anchorSeparador-2" href="http://localhost//proyecto_quintana/public/enConstruccion">Comercializacion</a>
+          <a class="anchorSeparador-2" href="http://localhost//proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a>
         </div>
       </div>
   </div>

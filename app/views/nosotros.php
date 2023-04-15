@@ -17,26 +17,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="http://electrovoltaics/proyecto_quintana/public/">Principal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacto">Contacto</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Mas Opciones
-          </a>
-          <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="http://electrovoltaics/proyecto_quintana/public/nosotros">Quienes Somos</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Catalogo</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Consultas</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Comercializacion</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>  
+      <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a></li>    
+        <li class="nav-item"><a class="nav-link" href="/proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
+        <li class="nav-item"><a class="nav-link" href="/proyecto_quintana/public/enConstruccion">Consultas</a></li>            
+        <li class="nav-item"><a class="nav-link" href="/proyecto_quintana/public/enConstruccion">Comercializacion</a></li>            
+        <li class="nav-item"><a class="nav-link" href="/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a></li>
           </ul>
         </li>
       </ul>
@@ -50,8 +36,6 @@
       <div class="position-relative bg-logo text-center ">
         <img class="banner w-50 img- mx-auto justify-content-center" src="assets/img/bannerLogo.jpeg"  alt="fotoPrincipal">
         </div>
-  
-     
     <nav id="navbar-example2" class="navbar navbar-light navbar-custom2 px-3 sticky-top">
       <a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="w-25" alt="bg-logo"></a>
       <ul class="nav nav-pills mx-auto">
