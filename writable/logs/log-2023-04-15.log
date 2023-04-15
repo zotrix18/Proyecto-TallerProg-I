@@ -1,0 +1,12 @@
+CRITICAL - 2023-04-15 16:08:52 --> include(/header.php): Failed to open stream: No such file or directory
+in APPPATH\views\principal.php on line 13.
+ 1 APPPATH\views\principal.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\proyecto_quintana\\app\\views\\principal.php', 13)
+ 2 APPPATH\views\principal.php(13): include()
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_quintana\\app\\views\\principal.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('principal.php', [], true)
+ 6 APPPATH\Controllers\Home.php(8): view('principal.php')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
