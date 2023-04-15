@@ -1,7 +1,7 @@
 <?php require('header.php')?> 
 <body>
  
-  <section class="introducing-left">
+  <section class="introducing">
      <div class="separador"></div>
     <h3 class="text-center">Tipo de entrega</h3>
       <p>

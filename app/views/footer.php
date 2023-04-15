@@ -18,7 +18,7 @@
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/enConstruccion">Catalogo de Productos</a>
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/enConstruccion">Consultas</a>
           <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/comercializacion">Comercializacion</a>
-          <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/enConstruccion">Terminos y Condiciones</a>
+          <a class="anchorSeparador-2" href="http://localhost/proyecto_quintana/public/tyc">Terminos y Condiciones</a>
         </div>
       </div>
   </div>
