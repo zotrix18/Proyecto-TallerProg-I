@@ -150,3 +150,12 @@ body{
     text-shadow: 1px 1px 6px #fff;
   }
 
+.anchorSeparador, .anchorSeparador-2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.redes h4, .sitios h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
