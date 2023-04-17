@@ -1,5 +1,6 @@
 <?php require('header.php')?> 
 
+<body class="bg-logo">
 <h2 class="text-center">¡Ponete en contacto con nosotros!</h2>
 <div class="forma mx-3">
     <form>
