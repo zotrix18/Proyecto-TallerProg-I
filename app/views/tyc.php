@@ -1,5 +1,5 @@
 <?php require('header.php')?> 
-<body>
+<body class="bg-logo">
 <div class="introducing py-3 my-3">
   <h2 class="text-center tyc-h2">Terminos y Condiciones</h2>
   <ul>
