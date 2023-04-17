@@ -37,7 +37,7 @@
           <img src="./assets/img/anteriormente.jpg" class="w-75" alt="hace-mucho">
         </div>
       </section>
-      <div class="separador" id="zona-2"></div>
+      <div class="separador rounded-pill" id="zona-2"></div>
 
       <section class="introducing" id="scrollspyHeading2">
         <h4 class="text-center subtitle">Innovacion</h4>
@@ -73,7 +73,7 @@
           </div>
         </div>
       </section>
-      <div class="separador" id="zona-3"></div>
+      <div class="separador rounded-pill" id="zona-3"></div>
       <section class="introducing" id="scrollspyHeading3">
         <h4 class="text-center subtitle">Cultura Empresarial</h4>
         <ul>
@@ -124,7 +124,7 @@
             Trabajamos incansablemente en la superación de los desafíos</p>
         </div>       
       </section>
-      <div class="separador" id="zona-4"></div>
+      <div class="separador rounded-pill" id="zona-4"></div>
       <section class="introducing" id="scrollspyHeading4">
         <h4 class="text-center subtitle">Mision y Vision</h4>
         <p><strong>Mision:</strong>
