@@ -88,6 +88,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-top: 2vw;
 }
 
 .redes a, .sitios a{

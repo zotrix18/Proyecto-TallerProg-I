@@ -37,7 +37,7 @@
           <img src="./assets/img/anteriormente.jpg" class="w-75" alt="hace-mucho">
         </div>
       </section>
-      <div class="separador-1-1 rounded-pill" id="zona-2"></div>
+      <div class="separador-1 rounded-pill" id="zona-2"></div>
 
       <section class="introducing" id="scrollspyHeading2">
         <h4 class="text-center subtitle">Innovacion</h4>
