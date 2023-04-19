@@ -1,6 +1,6 @@
 <?php require('header.php')?> 
 
-<body class="bg-logo">
+<body>
   <section class="container-fluid p-0" id="home">
     <div class="position-relative">
       <img class="img-style mx-auto w-100 mx-auto" src="assets/img/principal.jpeg"  alt="fotoPrincipal">

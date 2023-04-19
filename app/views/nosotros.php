@@ -1,13 +1,13 @@
 <?php require('header.php')?> 
 
-<body class="bg-logo">
+<body>
     
       <div class="position-relative bg-logo text-center ">
         <img class="banner w-50 img- mx-auto justify-content-center" src="assets/img/bannerLogo.jpeg"  alt="fotoPrincipal">
         </div>
-    <nav id="navbar-example2" class="navbar navbar-light navbar-custom2 px-3 sticky-top">
+    <nav id="subnav" class="navbar navbar-light navbar-custom2 px-3 sticky-top">
       <a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="w-25" alt="bg-logo"></a>
-      <ul class="nav nav-pills mx-auto">
+      <ul class="nav nav-pills mx-auto justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="#zona-1">Trayectoria</a>
         </li>
@@ -23,7 +23,7 @@
         </li>
       </ul>
     </nav>
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2"  data-bs-offset="50" class="scrollspy-example" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#subnav"  data-bs-offset="50" class="scrollspy-example" tabindex="0">
     <br>
       <section class="introducing" id="scrollspyHeading1">
         <div id="zona-1"></div>
@@ -33,11 +33,11 @@
         <p>A medida que la empresa maduró, es probable que haya enfrentado desafíos y competencia cada vez más fuerte en el mercado de las baterías. Para mantenerse a la vanguardia, la empresa pudo haber invertido en investigación y desarrollo para crear productos más avanzados y eficientes, así como también en marketing para aumentar su visibilidad y atraer nuevos clientes.</p>
         <p>En el camino, la empresa probablemente ha tenido sus altibajos, desde enfrentar crisis económicas y fluctuaciones del mercado, hasta celebrar hitos importantes, como la expansión a nuevos mercados o el lanzamiento de nuevos productos.</p>
         <p>A lo largo de los años, la empresa también puede haber adquirido nuevas habilidades y experiencia, como la gestión de empleados y la navegación de regulaciones comerciales.</p>
-        <div class="text-center">
+        <div class="text-center py-5">
           <img src="./assets/img/anteriormente.jpg" class="w-75" alt="hace-mucho">
         </div>
       </section>
-      <div class="separador rounded-pill" id="zona-2"></div>
+      <div class="separador-1-1 rounded-pill" id="zona-2"></div>
 
       <section class="introducing" id="scrollspyHeading2">
         <h4 class="text-center subtitle">Innovacion</h4>
@@ -73,7 +73,7 @@
           </div>
         </div>
       </section>
-      <div class="separador rounded-pill" id="zona-3"></div>
+      <div class="separador-1 rounded-pill" id="zona-3"></div>
       <section class="introducing" id="scrollspyHeading3">
         <h4 class="text-center subtitle">Cultura Empresarial</h4>
         <ul>
@@ -98,7 +98,9 @@
               Nos esforzamos por alcanzar la excelencia en todas nuestras actividades, desde la investigación y desarrollo hasta la producción y el servicio al cliente, siempre buscando mejorar continuamente para ofrecer la mejor calidad posible.</p>
           </li>
         </ul>
-        <br>
+        <div class="content text-center py-5">
+          <img src="./assets/img/staff.jpg" class="w-75" alt="staff">
+        </div>
         <div class="text-center texto-azul">
           <h3>Lo que valoramos</h3>
 
@@ -122,9 +124,12 @@
           
             <p class="text-blue">Persistencia <br>
             Trabajamos incansablemente en la superación de los desafíos</p>
+        </div>
+        <div class="content text-center py-5">
+          <img src="./assets/img/unidos.jpg" class="w-75" alt="union">
         </div>       
       </section>
-      <div class="separador rounded-pill" id="zona-4"></div>
+      <div class="separador-1 rounded-pill" id="zona-4"></div>
       <section class="introducing" id="scrollspyHeading4">
         <h4 class="text-center subtitle">Mision y Vision</h4>
         <p><strong>Mision:</strong>

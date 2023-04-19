@@ -3,6 +3,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    background-color: rgb(246,254,255);
 }
 
 .img-style{
@@ -46,18 +47,20 @@ body{
     font-size: 3vw;
 }
 
-.separador{
+.separador, .separador-1{
     background-color: rgb(53, 34, 179); 
     margin: 50px 0 50px 0;
     height: 25px;
 }
 
-.dropdown-toggle{
-     float: right;
+.separador-1{
+    background-color: rgb(53, 34, 179); 
+    height: 25px;
+    margin: 0 20vw 2vw 20vw;
 }
 
-.bg-logo{
-    background-color: rgb(246,254,255);
+.dropdown-toggle{
+     float: right;
 }
 
 .navbar-custom{
@@ -162,4 +165,8 @@ body{
 .redes h4, .sitios h4{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+}
+
+.mapita{
+    margin-left: 5vw;
 }

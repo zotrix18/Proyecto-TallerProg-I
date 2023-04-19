@@ -1,5 +1,5 @@
 <?php require('header.php')?> 
-<body class="bg-logo">
+<body>
  
   <section class="introducing">
      <div class="separador rounded-pill"></div>
