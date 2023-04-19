@@ -47,7 +47,7 @@
           <li>La empresa amplia su oferta de productos para incluir diferentes tipos de baterías y sistemas de almacenamiento de energía, como baterías para vehículos, sistemas de energía solar y baterías industriales, lo que podría ayudar a satisfacer las necesidades de una variedad de clientes.</li>
           <li>Mejora de la asistencia técnica: se implementa un programa de capacitación y asistencia técnica para sus clientes, lo que mejorarían su experiencia con los productos y aumentaría su satisfacción con la marca.</li>
         </ul>
-        <p>La innovación siempre ha sido uno de los principales valores de Electro Voltaics y por ello hemos creado una división de negocios dedicada al desarrollo de las baterias de Lítio. La división Lítio Moura actúa en el desarrollo de productos para satisfacer las necesidades del mercado que evoluciona constantemente, con la calidad y la credibilidad que hemos construído a lo largo de nuestra história.</p>
+        <p>La innovación siempre ha sido uno de los principales valores de Electro Voltaics y por ello hemos creado una división de negocios dedicada al desarrollo de las baterias de Lítio. La división Lítio actúa en el desarrollo de productos para satisfacer las necesidades del mercado que evoluciona constantemente, con la calidad y la credibilidad que hemos construído a lo largo de nuestra história.</p>
         <div class="conteiner-fluid">
           <div class="row">
             <div class="col-sm-12 col-md-6 text-center">

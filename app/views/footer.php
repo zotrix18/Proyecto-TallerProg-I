@@ -1,7 +1,6 @@
 </body>
 <footer>
 <div class="container-fluid" id="contacto">
-      <h1 class="text-center">Contacto</h1>
       <div class="row">
         <div class="col-sm-12 col-md-6 redes">
           <h4>Redes Sociales</h4>

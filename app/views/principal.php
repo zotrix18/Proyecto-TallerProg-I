@@ -2,8 +2,8 @@
 
 <body>
   <section class="container-fluid p-0" id="home">
-    <div class="position-relative">
-      <img class="img-style mx-auto w-100 mx-auto" src="assets/img/principal.jpeg"  alt="fotoPrincipal">
+    <div class="position-relative  text-center">
+      <img class="img-style mx-auto w-50" src="assets/img/principal.jpeg"  alt="fotoPrincipal">
       <div class="position-absolute top-50 start-50 translate-middle">
         <h1 class="titulo" id="color-changing-text">Electro Voltaics</h1>
         <p class="subtitulo display-2">El mejor aliado en tus proyectos electricos</p>
@@ -12,7 +12,7 @@
   
 
   <section id="home">
-    <div class="separador"></div>
+    <div class="separador  rounded-pill"></div>
     <h1 class="secundario text-dark text-center">Somos uno de los fabricantes de bateria mas importantes</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -35,7 +35,7 @@
         <span class="visually-hidden">Siguiente</span>
       </a>
     </div>
-    <div class="separador"></div>
+    <div class="separador  rounded-pill"></div>
     <div class="presentacion text-center">
       <h2>Abocados en ayudarte en diversos sectores</h2>
       <div class="container">
