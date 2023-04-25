@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity=" " crossorigin="">
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/miScript.js"></script>
 
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid" >
