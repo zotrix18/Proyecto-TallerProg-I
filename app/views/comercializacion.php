@@ -12,17 +12,35 @@
       <p class="text-justify">
         En primer lugar, para conocer el costo del envío, una vez al agregues al carrito tu compra, solo debes colocar tu código postal en el recuadro correspondiente, seleccionar la mensajería de tu preferencia y elegir si deseas el retiro en alguna sucursal de envio privada o en alguno de nuestros distribuidores. Actualmente realizamos envíos a todo el país través de Oca y Andreani; y si te encontrás en CABA o alrededores, comunicate con nosotros para acercarte a un distribuidor autorizado. Tené en cuenta que, para calcular el costo del envío, se toman en consideración tanto las dimensiones y peso del paquete como la distancia de la localidad de entrega.
       </p>
-      <div class="text-center">
-        <img src="assets/svg/oca.svg" class="w-25 mx-auto" alt="logo-ocas">
-        <img src="assets/svg/andreani-logo.svg" class="w-25 mx-auto" alt="logo-ocas">
-      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 text-center mt-5">
+              <img src="assets/svg/oca.svg" class="w-50 mx-auto" alt="logo-ocas">
+            </div>
+            <div class="col-sm-12 col-lg-6 text-center mt-auto my-auto">
+              <img src="assets/svg/andreani-logo.svg" class="w-75 mt-4" alt="logo-ocas">
+            </div>
+          </div>
+        </div>
+        
       <div class="separador rounded-pill"></div>
     <h3 class="text-center">Pagos</h3>
       <p>Contamos con dos formas de pago: a través de depósito/transferencia bancaria, con la cual obtenés el precio especial, o bien, a través de los métodos VoltaicsPagos (Visa o MasterCard) o MercadoPago (Tarjetas online, PagoFácil y RapiPago) con los cuales podés abonar en cuotas, al precio de lista.</p>
       <div class="text-center">
-        <img src="assets/svg/logo-nx.svg" class="w-25 px-5" alt="logo-naranjaX">
-        <img src="assets/svg/visa.svg" class="w-25 px-5" alt="logo-visa">
-        <img src="assets/svg/mastercard-logo.svg" class="w-25 px-5" alt="logo-mastercard">
+        <div class="content">
+          <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center mt-5">
+              <img src="assets/svg/logo-nx.svg" class="px-5" alt="logo-naranjaX">    
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center mt-auto my-auto">
+              <img src="assets/svg/visa.svg" class="w-100 px-5 pt-4" alt="logo-visa">
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center mt-auto my-auto">
+              <img src="assets/svg/mastercard-logo.svg" class="w-100 px-5 py-4" alt="logo-mastercard">
+            </div>
+          </div>
+        </div>
+        
       </div>
       <div class="separador rounded-pill"></div>
       <h3 class="text-center">Garantias</h3>

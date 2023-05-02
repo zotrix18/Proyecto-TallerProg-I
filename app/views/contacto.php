@@ -11,11 +11,11 @@
             <p class="mb-0">Av. Libertad 5289</p>
             <p class="mb-0">Tel.: +54 3795334455</p>
         </div>
-          <div class="col-sm-12 col-md-6 col-lg-7">
+          <div class="col-sm-12 col-md-6 col-lg-7 border border-dark shadow p-3 mb-5 bg-body rounded">
             <form>
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="name" class="form-control border border-secondary"  required id="nombre" placeholder="Nombre completo">
+                    <input type="name" class="form-control border border-secondary "  required id="nombre" placeholder="Nombre completo">
                 </div>
                 <br>
                 <div class="form-group">
