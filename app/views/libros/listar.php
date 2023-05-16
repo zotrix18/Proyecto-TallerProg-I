@@ -7,7 +7,7 @@
 </head>
 <body>
     Listar Libros
-
+    <!-- <?php print_r($libros); ?> -->
     <table class="table">
   <thead>
     <tr>
@@ -18,16 +18,17 @@
     </tr>
   </thead>
   <tbody>
-     <?php foreach($libro as $libro)?>
+     <?php foreach($libros as $libro):?>
         <tr >
-            <td><?php=$libro['id']?></td>
-            <td><?php=$libro['imagen']?></td>
-            <td><?php=$libro['nombre']?></td>
+            <td><?=$libro['id'];?></td>
+            <td><?=$libro['imagen'];?></td>
+            <td><?=$libro['nombre'];?></td>
         </tr>
-    
+        <?php endforeach;?>
   </tbody>
 </table>
 
+<a href="<?=base_url('http://localhost/proyecto_quintana/public/crear')?>" >Crear Libro</a>
     
 </body>
 </html>
