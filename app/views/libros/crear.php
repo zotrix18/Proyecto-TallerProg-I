@@ -13,7 +13,7 @@
         <div class="card-body">
             <h5 class="card-title">Ingresar Datos del libro:</h5>
             <p class="card-text">
-                <form method="post" action="<?=base_url('http://localhost/proyecto_quintana/public/guardar')?>">
+                <form method="post" action="<?=site_url('/guardar')?>" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input id="nombre" class="form-control" type="text" name="nombre">
