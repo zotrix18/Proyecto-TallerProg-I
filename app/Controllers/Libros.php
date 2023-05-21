@@ -10,6 +10,7 @@ class Libros extends Controller{
         $libro = new Libro(); 
         // Crea una variable llamado datos conteniendo un indice libros, ordenado por id y que busque en todos los registros
         $datos['libros']=$libro->orderBy('id', 'ASC')->findAll(); 
+        $datos['cabecera'] = view('libros/header');
         return view ('libros/listar.php', $datos); //se le pasa la variable a la vista
     }
 
@@ -28,7 +29,9 @@ class Libros extends Controller{
         ]);
 
         if(!$validacion){
-            return $this->response->redirect(site_url('/listar'));
+            $session=session();
+            $session->setFlashdata('mensaje','Revise la informacion');
+            return redirect()->back()->withInput();
         }
         
         $libro = new Libro();
@@ -57,7 +60,7 @@ class Libros extends Controller{
     public function editar($id=null){
         $libro= new Libro();
         $datos['libro']=$libro->where('id', $id)->first();
-
+        $datos['cabecera'] = view('libros/header');
         return view('libros/editar.php', $datos);
     }
 
@@ -66,6 +69,17 @@ class Libros extends Controller{
         $datos = [
             'nombre' => $this->request->getVar('nombre')];
         $id=$this->request->getVar('id');
+        
+        $validacion= $this->validate([
+            'nombre'=>'required|min_length[3]',
+        ]);
+
+        if(!$validacion){
+            $session=session();
+            $session->setFlashdata('mensaje','Revise la informacion');
+            return redirect()->back()->withInput();
+        }
+
         $libro->update($id, $datos);
 
         $validacion= $this->validate([

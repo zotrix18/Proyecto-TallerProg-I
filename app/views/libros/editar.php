@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity=" " crossorigin="">
-    <title>Document Title</title>
-</head>
-<body>
+    
     Editar libros
-
+    <?=$cabecera?>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Ingresar Datos del libro:</h5>
