@@ -53,9 +53,16 @@ $routes->get('/enConstruccion', 'Home::construccion');
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+//pruebas de libreria, conociendo bd
 $routes->get('/listar', 'Libros::index');
 $routes->get('/crear', 'Libros::crear');
 $routes->post('/guardar', 'Libros::guardar');
 $routes->get('borrar/(:num)', 'Libros::borrar/$1');
 $routes->get('editar/(:num)', 'Libros::editar/$1');
 $routes->post('/actualizar', 'Libros::actualizar');
+
+//rutas login
+$routes->get('/login', 'Usuarios::login');
+$routes->get('sigin', 'Usuarios::sigin');
+$routes->post('iniciar', 'Usuarios::iniciar');
+$routes->post('registrar', 'Usuarios::registrar');

@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'biblioteca',
+        'database' => 'bd_quintana_facundo',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
