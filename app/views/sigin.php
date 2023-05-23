@@ -7,7 +7,7 @@
         <div id="loginFrame" class="position-relative">
             <div id="signup" class="levelDown shadow bg-white card p-3">
                 <h3 class="my-2 text-center">Registro</h3>
-                <form action="<?=site_url('/registrar')?>" method="post" class='mx-3 my-3'>
+                <form action="<?=site_url('/registrar')?>" enctype="multipart/form-data" method="post" class='mx-3 my-3'>
                 <div class="mb-3">
                     <label for="nombre">Nombre</label>
                     <input type="text" required value="<?=old('nombre')?>" class="mt-2 form-control" id="nombre" placeholder="Ingresa tu nombre" name="nombre">

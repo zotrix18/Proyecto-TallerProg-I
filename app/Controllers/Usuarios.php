@@ -8,7 +8,7 @@ class Usuarios extends Controller{
     public function login(){
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');
-        return view('login.php',$datos);
+        return view('login.php', $datos);
     }
 
     public function sigin(){
@@ -18,19 +18,40 @@ class Usuarios extends Controller{
     }
 
     public function iniciar(){
-        // $usuario = new Usuario();
+        $usuario = new Usuario();
+        $user = $this->request->getVar('user');
         $password = $_POST['pass'];
-        $hashedPass = hash('sha256', $pass);
+        $hashedPass = hash('sha256', $password);
 
-        $datos = [
-            'nombre' => $this->request->getVar('user'),
-            'contraseña' => $hashedPass
-        ];
-        print_r($datos);
+        $nick=$usuario->where('usuario', $user)->first();
+        
+
+        if($nick==NULL){
+            $session=session();
+            $session->setFlashdata('mensaje','El usuario no existe');
+            return redirect()->back()->withInput();
+        }
+
+        $passs=$usuario->where('pass', $hashedPass)->first();
+        if($passs==NULL){
+            $session=session();
+            $session->setFlashdata('mensaje','Contraseña incorrecta');
+            return redirect()->back()->withInput();
+        }
+        
+        $session = session();
+        $session->set('usuario', $usuario);
+        return $this->response->redirect(site_url('/inicio'));
+        
     }
 
     public function registrar(){
+        $nombre = $this->request->getVar('nombre');
+        $apellido = $this->request->getVar('apellido');
+        $email = $this->request->getVar('email');
+        $user = $this->request->getVar('user');
         $password = $_POST['pass'];
+
         $validacion= $this->validate([
             'nombre'=>'required|min_length[1]',
             'apellido'=>'required|min_length[1]',
@@ -52,25 +73,47 @@ class Usuarios extends Controller{
             $session->setFlashdata('mensaje','Revise la informacion');
             return redirect()->back()->withInput();
         }
+
+        //se instancia el acceso a la bd a travez del modelo
         $usuario = new Usuario();
 
+        //verifica si el correo ya esta en la bd
+        $correo=$usuario->where('email', $email)->first();
+        if( !$correo == NULL){
+            $session=session();
+            $session->setFlashdata('mensaje','Correo ya registrado');
+            return redirect()->back()->withInput();
+        }
+        
+        //verifica que el user no estee siendo usado
+        $nick=$usuario->where('usuario', $user)->first();
+        if( !$nick ==NULL ){
+            $session=session();
+            $session->setFlashdata('mensaje','El usuario ya esta siendo usado');
+            return redirect()->back()->withInput();
+        }
+        
 
         
         $hashedPass = hash('sha256', $password);
 
         $datos = [
-            'nombre' => $this->request->getVar('nombre'),
-            'apellido'=> $this->request->getVar('apellido'),
-            'email'=>$this->request->getVar('email'),
-            'usuario'=>$this->request->getVar('user'),
-            'pass'=>$hashedPass,
-            'perfil_id'=>'1',
+            'nombre' => $nombre,
+            'apellido'=> $apellido,
+            'email'=> $email,
+            'usuario'=> $user,
+            'pass'=> $hashedPass,
+            'perfil_id'=> 1,
             'baja'=>'no'
         ];
-        
-        
-        
-        print_r($datos);
+                
+        $usuario->insert($datos);
+        return $this->response->redirect(site_url('/login'));
+    }
 
+    public function inicio(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        return view('inicio.php', $datos);
     }
 }

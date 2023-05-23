@@ -33,14 +33,8 @@
 
 
     
-    </head>
+</head>
+<body>
+  
 
-    <?php if(session('mensaje')){?>
-
-<div class="alert alert-danger text-center" role="alert">
-    <?php 
-        echo session('mensaje');
-    ?>
-</div>
-<?php
-}?>
+    

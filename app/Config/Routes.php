@@ -61,8 +61,15 @@ $routes->get('borrar/(:num)', 'Libros::borrar/$1');
 $routes->get('editar/(:num)', 'Libros::editar/$1');
 $routes->post('/actualizar', 'Libros::actualizar');
 
+
+
+//rutas sigin
+$routes->post('registrar', 'Usuarios::registrar');
+$routes->get('sigin', 'Usuarios::sigin');
+
 //rutas login
 $routes->get('/login', 'Usuarios::login');
-$routes->get('sigin', 'Usuarios::sigin');
 $routes->post('iniciar', 'Usuarios::iniciar');
-$routes->post('registrar', 'Usuarios::registrar');
+
+//inicio sesion
+$routes->get('inicio', 'Usuarios::inicio');
