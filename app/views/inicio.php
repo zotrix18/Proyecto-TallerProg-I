@@ -1,4 +1,6 @@
 <?=$cabecera?>
 
+    
+asdasdadas
 
 <?=$pie?>
