@@ -1,6 +1,15 @@
 <?=$cabecera?>
 
+
+<?php
+$session=session();
+if($session->has('usuario')){
+    echo "Bienvenido, ";
+}else{
+    echo "adius ";
+}
+?>
     
-asdasdadas
+<!-- asdasdadas -->
 
 <?=$pie?>

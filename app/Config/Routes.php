@@ -73,3 +73,4 @@ $routes->post('iniciar', 'Usuarios::iniciar');
 
 //inicio sesion
 $routes->get('inicio', 'Usuarios::inicio');
+$routes->get('logout', 'Usuarios::logout');

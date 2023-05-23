@@ -32,16 +32,18 @@ class Usuarios extends Controller{
             return redirect()->back()->withInput();
         }
 
+        // $passs=$nick['pass'];
+        
         $passs=$usuario->where('pass', $hashedPass)->first();
-        if($passs==NULL){
+        if($passs==$hashedPass){
             $session=session();
             $session->setFlashdata('mensaje','Contraseña incorrecta');
             return redirect()->back()->withInput();
         }
         
         $session = session();
-        $session->set('usuario', $usuario);
-        return $this->response->redirect(site_url('/inicio'));
+        $session->set('usuario', $nick);
+        return $this->response->redirect(site_url('/'));
         
     }
 
@@ -115,5 +117,11 @@ class Usuarios extends Controller{
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');
         return view('inicio.php', $datos);
+    }
+
+    public function logout(){
+        session();
+        session_destroy();
+        return $this->response->redirect(site_url('/'));
     }
 }
