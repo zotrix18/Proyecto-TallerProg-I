@@ -1,4 +1,4 @@
-<?php require('header.php')?> 
+<?=$cabecera?> 
 
 <body>
 <h2 class="text-center">¡Ponete en contacto con nosotros!</h2>
@@ -49,4 +49,4 @@
         </div>
     </div>
 </div>
-<?php require('footer.php')?>
+<?=$pie?>

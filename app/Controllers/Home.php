@@ -5,26 +5,38 @@ namespace App\Controllers;
 class Home extends BaseController
 {
     public function index(){
-        return view('principal.php');
+     $datos['cabecera']= view('template/header.php');
+     $datos['pie']= view('template/footer.php');
+        return view('principal.php', $datos);
     }
 
     public function nosotros(){
-        return view('nosotros.php');
+     $datos['cabecera']= view('template/header.php');
+     $datos['pie']= view('template/footer.php');
+        return view('nosotros.php', $datos);
     }
 
    public function construccion(){
-        return view('construccion.php');
+     $datos['cabecera']= view('template/header.php');
+     $datos['pie']= view('template/footer.php');
+        return view('construccion.php', $datos);
    }
 
    public function comercializacion(){
-        return view('comercializacion.php');
+     $datos['cabecera']= view('template/header.php');
+     $datos['pie']= view('template/footer.php');
+        return view('comercializacion.php', $datos);
    }
 
    public function terminos(){
-        return view('tyc.php');
+     $datos['cabecera']= view('template/header.php');
+     $datos['pie']= view('template/footer.php');
+        return view('tyc.php', $datos);
    }
 
    public function contacto(){
-        return view('contacto.php');
+     $datos['cabecera']= view('template/header.php');
+     $datos['pie']= view('template/footer.php');
+        return view('contacto.php', $datos);
    }
 }

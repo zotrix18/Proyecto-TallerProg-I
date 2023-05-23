@@ -1,4 +1,4 @@
-<?php require('header.php')?> 
+<?=$cabecera?>
 
 <body>
   <section class="container-fluid p-0" id="home">
@@ -62,4 +62,4 @@
           </div>
   </section>
 
-  <?php require('footer.php')?> 
+  <?=$pie?> 

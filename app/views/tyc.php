@@ -1,4 +1,4 @@
-<?php require('header.php')?> 
+<?=$cabecera?>
 <body>
 <div class="introducing py-3 my-3">
   <h2 class="text-center tyc-h2">Terminos y Condiciones</h2>
@@ -21,4 +21,4 @@
     <li><p>16.-<strong>Comunicación:</strong> Los clientes pueden comunicarse con ElectroVoltaics a través de los canales de comunicación que se encuentran disponibles en el sitio web de ElectroVoltaics. ElectroVoltaics se reserva el derecho de responder a las comunicaciones en el momento que considere oportuno.</p></li>
   </ul>
 </div>
-<?php require('footer.php')?> 
+<?=$pie?>

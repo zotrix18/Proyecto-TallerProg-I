@@ -1,4 +1,4 @@
-<?php require('header.php')?> 
+<?=$cabecera?>
 <body>
  
   <section class="introducing">
@@ -47,4 +47,4 @@
      <p>Si. Contamos con una red de asistencia técnica propia con más de 70 puntos Contamos con una Red de Asistencia técnica propia con más de 70 puntos esparcidos por todo Argentina. Algunos distribuidores exclusivos ofrecen atendimiento domiciliar, a depender del área de actuación y según la demanda existente y la posibilidad de ejecución del servicio. Para informarse acerca de la disponibilidad de este atendimiento, solicitamos que contacte nuestro distribuidor exclusivo para su región. La lista de todos los distribuidores se encuentra en la opción Red de Distribución.</p>
       <div class="text-center pb-3 mb-3"><img src="assets/img/1y-garantia.png" class="w-25" alt="garantia"></div>
   </section >
-<?php require('footer.php')?> 
+  <?=$pie?>

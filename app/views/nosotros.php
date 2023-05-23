@@ -1,4 +1,4 @@
-<?php require('header.php')?> 
+<?=$cabecera?>
 
 <body>
     
@@ -145,4 +145,4 @@
       </section>  
     </div>   
 
-<?php require('footer.php')?>
+    <?=$pie?>
