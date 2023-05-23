@@ -24,6 +24,7 @@ class Usuarios extends Controller{
         $hashedPass = hash('sha256', $password);
 
         $nick=$usuario->where('usuario', $user)->first();
+        $id_user=$nick['perfil_id'];
         
 
         if($nick==NULL){
@@ -43,7 +44,12 @@ class Usuarios extends Controller{
         
         $session = session();
         $session->set('usuario', $nick);
+
+        if(!($id_user==2)){
         return $this->response->redirect(site_url('/'));
+        }else{
+            return $this->response->redirect(site_url('/inicio'));
+        }
         
     }
 
@@ -111,12 +117,6 @@ class Usuarios extends Controller{
                 
         $usuario->insert($datos);
         return $this->response->redirect(site_url('/login'));
-    }
-
-    public function inicio(){
-        $datos['cabecera']= view('template/header.php');
-        $datos['pie']= view('template/footer.php');
-        return view('inicio.php', $datos);
     }
 
     public function logout(){

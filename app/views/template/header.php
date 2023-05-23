@@ -11,13 +11,14 @@
 
     <?php
     $session=session();
+    $logSesion = $session->get('usuario');
     if($session->has('usuario')){
         // session_destroy();
-        $logSesion = $session->get('usuario');
+        // $logSesion = $session->get('usuario');
         // print_r($logSesion);
         $nombre = $logSesion['nombre'];
         $apellido = $logSesion['apellido'];
-        $email = $logSesion['email'];
+        
         ?>
 
         
