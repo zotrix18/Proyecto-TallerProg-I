@@ -12,7 +12,9 @@
     <?php
     $session=session();
     if($session->has('usuario')){
+        // session_destroy();
         $logSesion = $session->get('usuario');
+        // print_r($logSesion);
         $nombre = $logSesion['nombre'];
         $apellido = $logSesion['apellido'];
         $email = $logSesion['email'];
@@ -48,10 +50,7 @@
     </nav>
     
     <?php
-    }if($session->has('usuario') ){
-
-    }
-    else{?>
+    }else{?>
         
       <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid" >
@@ -82,12 +81,12 @@
             $paginaDeseada = 'login';
 
             //Si esta en login, no muestra la ruta a la pagina login
-            if (!$paginaActual === $paginaDeseada) {
-              ?>
+            if (!($paginaActual === $paginaDeseada)) {
+          ?>
                 <div class="text-center">
                   <a href="<?=site_url('login')?>">Logearse</a>    
                 </div> 
-              <?php
+            <?php
             } 
             ?>
       </div>
