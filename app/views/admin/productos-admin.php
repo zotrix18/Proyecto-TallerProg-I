@@ -2,6 +2,7 @@
 
 <br>
     <br>
+    <a class="text-dark" href="<?=base_url('/añadir')?>" >Añadir Producto</a>
     <table class="table">
   <thead>
     <tr>
@@ -20,24 +21,23 @@
             <td><?=$producto['id'];?></td>
             <td><?=$producto['nombre'];?></td>
             <td><?=$producto['descripcion'];?></td>
-            <td><?=$producto['precio'];?></td>
-            <td><?=$producto['stock'];?></td>
+            <td>$<?=$producto['precio'];?></td>
+            <td><?=$producto['stock'];?> unidades</td>
             <td>
               <img class="img-thumbnail" 
               src="<?=base_url()?>uploads/<?=$producto['imagen'];?>" 
               alt="thumbnail"
-              width=10%;>
+              width=5%;>
             </td>
             <td> 
-                <a href="<?=base_url('editar/'.$libro['id']);?>" class="btn btn-info" type="button">Editar</a>
-                <a href="<?=base_url('borrar/'.$libro['id']);?>" class="btn btn-danger" type="button">Borrar</a>
+                <a href="<?=site_url('editar/'.$producto['id']);?>" class="btn btn-info" type="button">Editar</a>
               </td>
         </tr>
         <?php endforeach;?>
   </tbody>
 </table>
 
-<a href="<?=base_url('/crear')?>" >Crear Libro</a>
+
     
 
 

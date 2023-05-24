@@ -54,12 +54,12 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
 //pruebas de libreria, conociendo bd
-$routes->get('/listar', 'Libros::index');
-$routes->get('/crear', 'Libros::crear');
-$routes->post('/guardar', 'Libros::guardar');
-$routes->get('borrar/(:num)', 'Libros::borrar/$1');
-$routes->get('editar/(:num)', 'Libros::editar/$1');
-$routes->post('/actualizar', 'Libros::actualizar');
+// $routes->get('/listar', 'Libros::index');
+// $routes->get('/crear', 'Libros::crear');
+// $routes->post('/guardar', 'Libros::guardar');
+// $routes->get('borrar/(:num)', 'Libros::borrar/$1');
+// $routes->get('editar/(:num)', 'Libros::editar/$1');
+// $routes->post('/actualizar', 'Libros::actualizar');
 
 
 
@@ -77,5 +77,8 @@ $routes->get('logout', 'Usuarios::logout');
 //admin
 $routes->get('inicio', 'Admins::inicio');
 $routes->get('productosAdmin', 'Admins::productosAdmin');
+$routes->get('añadir', 'Admins::añadir');
+$routes->post('guardar', 'Productos::guardar');
+$routes->get('editar/(:num)', 'Productos::editar/$1');
 $routes->get('usuariosAdmin', 'Admins::usuariosCRUD');
 $routes->get('mensajesAdmin', 'Admins::mensajes');

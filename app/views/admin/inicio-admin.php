@@ -3,8 +3,6 @@
 
 <?php
 $session=session();
-
-
     $session=session();
     //variable q contiene los datos del usuario logeado
     $logSesion = $session->get('usuario');
@@ -27,7 +25,8 @@ $session=session();
     <br>
     <br>
     <br>
-    <br><br>
+    <br>
+    <br>
     <br>
     <br>
     <br>

@@ -10,7 +10,8 @@ class Producto extends Model{
         'nombre',
         'descripcion',
         'precio',
-        'stock'
+        'stock',
+        'imagen'
     ];
    
 }

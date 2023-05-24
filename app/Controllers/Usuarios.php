@@ -24,7 +24,7 @@ class Usuarios extends Controller{
         $hashedPass = hash('sha256', $password);
 
         $nick=$usuario->where('usuario', $user)->first();
-        $id_user=$nick['perfil_id'];
+        
         
 
         if($nick==NULL){
@@ -32,8 +32,7 @@ class Usuarios extends Controller{
             $session->setFlashdata('mensaje','El usuario no existe');
             return redirect()->back()->withInput();
         }
-
-        // $passs=$nick['pass'];
+        $id_user=$nick['perfil_id'];
         
         $passs=$usuario->where('pass', $hashedPass)->first();
         if($passs==$hashedPass){
@@ -48,8 +47,7 @@ class Usuarios extends Controller{
         if(!($id_user==2)){
         return $this->response->redirect(site_url('/'));
         }else{
-            // return $this->response->redirect(base_url('/admin/inicio'));
-            return redirect()->to(base_url('/admin/inicio'));
+            return $this->response->redirect(base_url('inicio'));
         }
         
     }
@@ -72,7 +70,6 @@ class Usuarios extends Controller{
             // La contraseña no cumple con la longitud mínima requerida
             $session=session();
             $session->setFlashdata('mensaje','La contraseña debe tener almenos 5 caracteres');
-            // $validacion=false;
             return redirect()->back()->withInput();
 
         } 

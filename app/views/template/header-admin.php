@@ -44,13 +44,6 @@
       </div>
     </nav>
 
-
-
-
-    
-    
-
-
 </head>
 <body>
     <?php if(session('mensaje')){?>
