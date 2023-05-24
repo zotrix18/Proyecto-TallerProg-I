@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\Producto;
 
 class Admins extends Controller{
 
@@ -12,10 +13,18 @@ class Admins extends Controller{
     }
 
     public function productosAdmin(){
-        $productos = new Producto();
-        $datos['productos']=$productos->orderBy('id', 'ASC')->findAll();
+        $producto=new Producto();
+        $datos['productos']=$producto->orderBy('id')->findAll();
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');
         return view('admin/productos-admin.php', $datos);
     }
+
+    public function añadir(){
+        $datos['cabecera']= view('template/header-admin.php');
+        $datos['pie']= view('template/footer.php');
+        return view('admin/añadir-admin.php', $datos);
+    }
+
+   
 }
