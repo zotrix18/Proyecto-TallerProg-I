@@ -48,7 +48,8 @@ class Usuarios extends Controller{
         if(!($id_user==2)){
         return $this->response->redirect(site_url('/'));
         }else{
-            return $this->response->redirect(site_url('/inicio'));
+            // return $this->response->redirect(base_url('/admin/inicio'));
+            return redirect()->to(base_url('/admin/inicio'));
         }
         
     }

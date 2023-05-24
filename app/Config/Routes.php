@@ -76,3 +76,6 @@ $routes->get('logout', 'Usuarios::logout');
 
 //admin
 $routes->get('inicio', 'Admins::inicio');
+$routes->get('productosAdmin', 'Admins::productosAdmin');
+$routes->get('usuariosAdmin', 'Admins::usuariosCRUD');
+$routes->get('mensajesAdmin', 'Admins::mensajes');
