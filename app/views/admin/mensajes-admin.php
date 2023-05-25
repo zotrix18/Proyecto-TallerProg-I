@@ -8,7 +8,7 @@
         $nombre = $mensaje['nombre'];
         $prefijo = $mensaje['prefijo'];
         $telefono = $mensaje['telefono'];
-        $correo = $mensaje['correo'];
+        $correo = $mensaje['email'];
         $asunto = $mensaje['asunto'];
         $mensajeText = $mensaje['descripcion'];
         $leido = $mensaje['leido'];
@@ -54,7 +54,7 @@
         $nombre = $mensaje['nombre'];
         $prefijo = $mensaje['prefijo'];
         $telefono = $mensaje['telefono'];
-        $correo = $mensaje['correo'];
+        $correo = $mensaje['email'];
         $asunto = $mensaje['asunto'];
         $mensajeText = $mensaje['descripcion'];
         $leido = $mensaje['leido'];

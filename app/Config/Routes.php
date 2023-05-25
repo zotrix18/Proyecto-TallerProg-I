@@ -62,25 +62,28 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 // $routes->post('/actualizar', 'Libros::actualizar');
 
 
-
-//rutas sigin
-$routes->post('registrar', 'Usuarios::registrar');
+//usario comun
+//rutas Sigin
 $routes->get('sigin', 'Usuarios::sigin');
-
-//rutas login
+$routes->post('registrar', 'Usuarios::registrar');
+//rutas Login
 $routes->get('/login', 'Usuarios::login');
 $routes->post('iniciar', 'Usuarios::iniciar');
-
-//inicio sesion
+//inicio Sesion
 $routes->get('logout', 'Usuarios::logout');
 
-//admin
+
+//Usuario Admin
 $routes->get('inicio', 'Admins::inicio');
+//CRUD productos
 $routes->get('productosAdmin', 'Admins::productosAdmin');
 $routes->get('añadir', 'Admins::añadir');
 $routes->post('guardar', 'Productos::guardar');
 $routes->get('editar/(:num)', 'Productos::editar/$1');
+//Baja de usuario
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
 $routes->get('baja/(:num)', 'Usuarios::baja/$1');
+//Mensajes
 $routes->get('mensajes', 'Mensajes::listar');
 $routes->get('leido/(:num)', 'Mensajes::leido/$1');
+$routes->post('recepMensaje', 'Mensajes::mensajeContacto');

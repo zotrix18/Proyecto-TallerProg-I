@@ -12,10 +12,10 @@
             <p class="mb-0">Tel.: +54 3795334455</p>
         </div>
           <div class="col-sm-12 col-md-6 col-lg-7 border border-dark shadow p-3 mb-5 bg-body rounded">
-          <form action="<?=site_url('/contacto')?>" enctype="multipart/form-data" method="post" class='mx-3 my-3'>
+          <form action="<?=site_url('/recepMensaje')?>" enctype="multipart/form-data" method="post" class='mx-3 my-3'>
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control border border-secondary "  required id="nombre" placeholder="Nombre completo">
+                    <input type="text" value="<?=old('nombre')?>" id="nombre" name="nombre" class="form-control border border-secondary "  required id="nombre" placeholder="Nombre completo">
                 </div>
                 <br>
                 <div class="container">
@@ -32,7 +32,7 @@
                             <div class="col">
                             <div class="input-group">
                                 <span class="input-group-text">+</span>
-                                <input type="number" id="prefijo" name="prefijo" class="form-control border border-secondary" required placeholder="Prefijo">
+                                <input type="number" value="<?=old('prefijo')?>" id="prefijo" name="prefijo" class="form-control border border-secondary" required placeholder="Prefijo">
                             </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                         <div class="col-sm-8 .col-11">
                         <div class="form-group">
                             <label for="telefono">Telefono</label>
-                            <input type="number" id="telefono" name="telefono" class="form-control border border-secondary" required placeholder="Numero telefono sin 015">
+                            <input type="number" id="telefono" name="telefono" value="<?=old('telefono')?>" class="form-control border border-secondary" required placeholder="Numero telefono sin 015">
                         </div>
                         </div>
                     </div>
@@ -48,18 +48,18 @@
 
                 <br>
                 <div class="form-group">
-                    <label for="email">Correo Electronico</label>
-                    <input type="email" id="email" name="email" class="form-control border border-secondary" required id="email"  placeholder="Correo">
+                    <label for="email">Correo</label>
+                    <input type="email" required value="<?=old('email')?>" class="mt-2 border border-secondary form-control" id="email" name="email">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="asunto" class="form-control border border-secondary" required id="asunto"  placeholder="Asunto">
+                    <input type="text" required id="asunto" name="asunto" value="<?=old('asunto')?>" class="form-control border border-secondary"   placeholder="Asunto">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>
-                    <textarea id="descripcion" name="descripcion" class="form-control border border-secondary" rows="5"  required id="Descripcion" placeholder="Describa brevemente su consulta"></textarea>
+                    <textarea required id="Descripcion"  name="descripcion" value="<?=old('descripcion')?>" class="form-control border border-secondary" rows="5"  placeholder="Describa brevemente su consulta"></textarea>
                 </div>
                 <br>  
                 <div class="form-check">

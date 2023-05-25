@@ -106,8 +106,21 @@
         echo session('mensaje');
     ?>
 </div>
+
+
 <?php
 }?>
   
+  <?php if(session('aviso')){?>
+
+<div class="alert alert-success text-center" role="alert">
+    <?php 
+        echo session('aviso');
+    ?>
+</div>
+
+
+<?php
+}?>
 
     

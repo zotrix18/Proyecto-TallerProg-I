@@ -10,7 +10,7 @@ class Mensaje extends Model{
         'nombre',
         'prefijo',
         'telefono',
-        'correo'.
+        'email',
         'asunto',
         'descripcion',
         'leido'
