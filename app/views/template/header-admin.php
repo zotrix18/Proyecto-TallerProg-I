@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electro Voltaics S.A.</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity=" " crossorigin="">
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/js/jquery.min.js">
+    <link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css')?>" integrity=" " crossorigin="">
+    <script src="/proyecto_quintana/app/public/assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/proyecto_quintana/public/assets/css/styles.css">
+    <link rel="stylesheet" href="/proyecto_quintana/public/assets/js/jquery.min.js">
     
 
     <?php
@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="<?=site_url('productosAdmin')?>">Productos</a></li>    
-            <li class="nav-item"><a class="nav-link" href="<?=site_url('usuariosCRUD')?>">Usuarios</a></li>            
+            <li class="nav-item"><a class="nav-link" href="<?=site_url('usuariosAdmin')?>">Usuarios</a></li>            
             <li class="nav-item"><a class="nav-link" href="<?=site_url('mensajes')?>">Mensajes</a></li>            
             <li class="nav-item"><a class="nav-link" href="<?=site_url('facturasCRUD')?>">Facturas</a></li>            
               </ul>

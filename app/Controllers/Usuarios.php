@@ -71,7 +71,6 @@ class Usuarios extends Controller{
             $session=session();
             $session->setFlashdata('mensaje','La contraseña debe tener almenos 5 caracteres');
             return redirect()->back()->withInput();
-
         } 
 
         if(!$validacion){
@@ -121,5 +120,13 @@ class Usuarios extends Controller{
         session();
         session_destroy();
         return $this->response->redirect(site_url('/'));
+    }
+
+    public function listarUsuarios(){
+        $usuario=new Usuario();
+        $datos['usuarios']=$usuario->orderBy('id')->findAll();
+        $datos['cabecera']= view('template/header-admin.php');
+        $datos['pie']= view('template/footer.php');
+        return view('admin/usuarios-admin', $datos);
     }
 }

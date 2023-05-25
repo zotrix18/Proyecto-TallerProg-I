@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity=" " crossorigin="">
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/js/jquery.min.js">
 <?=$cabecera?>
 
 <div class="container">
@@ -9,7 +5,7 @@
             <div class="card-body">
                 <h5 class="card-title">Ingresar Datos del producto:</h5>
                 <p class="card-text">
-                    <form method="post" action="<?=site_url('/actualizar')?>" enctype="multipart/form-data">
+                    <form method="post" action="" enctype="multipart/form-data">
 
                     <input type="hidden" name="id" value="<?=$producto['id']?>">
                         <div class="form-group">
@@ -20,6 +16,36 @@
                             class="form-control" 
                             type="text" 
                             name="nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripcion:</label>
+                            <input 
+                            id="descripcion" 
+                            value="<?=$producto['descripcion']?>" 
+                            class="form-control" 
+                            type="text" 
+                            name="nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="precio">Precio:</label>
+                            <input 
+                            id="precio" 
+                            value="<?=$producto['precio']?>" 
+                            class="form-control" 
+                            type="text" 
+                            name="precio">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stock">Stock:</label>
+                            <input 
+                            id="stock" 
+                            value="<?=$producto['stock']?>" 
+                            class="form-control" 
+                            type="text" 
+                            name="stock">
                         </div>
 
                         <div class="form-group">

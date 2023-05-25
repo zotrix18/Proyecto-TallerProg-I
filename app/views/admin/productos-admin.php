@@ -30,7 +30,7 @@
               width=5%;>
             </td>
             <td> 
-                <a href="<?=site_url('editar/'.$producto['id']);?>" class="btn btn-info" type="button">Editar</a>
+                <a href="<?= base_url('editar/'.$producto['id']);?>" class="btn btn-info" type="button">Editar</a>
               </td>
         </tr>
         <?php endforeach;?>
