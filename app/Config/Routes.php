@@ -83,3 +83,4 @@ $routes->get('editar/(:num)', 'Productos::editar/$1');
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
 $routes->get('baja/(:num)', 'Usuarios::baja/$1');
 $routes->get('mensajes', 'Mensajes::listar');
+$routes->get('leido/(:num)', 'Mensajes::leido/$1');

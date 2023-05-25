@@ -85,7 +85,7 @@
             if (!($paginaActual === $paginaDeseada)) {
           ?>
                 <div class="text-center">
-                  <a href="<?=site_url('login')?>">Logearse</a>    
+                  <a class="text-dark" href="<?=site_url('login')?>">Logearse</a>    
                 </div> 
             <?php
             } 

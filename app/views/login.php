@@ -24,7 +24,7 @@
               </div>
               
             </form>
-            <p>No tienes cuenta?<a href="<?=site_url('sigin') ?>" > Crea una</a></p> 
+            <p>No tienes cuenta? <a class="text-dark" href="<?=site_url('sigin') ?>" >Crea una</a></p> 
           </div>
         </div>
       </div>

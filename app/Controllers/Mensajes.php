@@ -12,4 +12,14 @@ class Mensajes extends Controller{
         $datos['pie']= view('template/footer.php');
         return view('admin/mensajes-admin', $datos);
     }
+
+    public function leido($id=NULL){
+        $mensajes = new Mensaje();
+        $mensajeleido= $mensajes->where('id', $id)->first();
+        $mensajeleido=[
+            'leido'=> '1'
+        ];
+        $mensajes->update($id, $mensajeleido);
+        return $this->response->redirect(site_url('mensajes'));
+    }
 }
