@@ -7,11 +7,7 @@ use App\Models\Producto;
 class Productos extends Controller{
 
     public function guardar(){
-        // $nombre = $this->request->getVar('nombre');
-        // $descripcion = $this->request->getVar('descripcion');
-        // $stock = $this->request->getVar('stock');
-        // $precio = $this->request->getVar('precio');
-        
+                
         $validacion= $this->validate([
             'nombre'=>'required|min_length[3]',
             'descripcion'=>'required|min_length[3]',

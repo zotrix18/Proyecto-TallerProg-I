@@ -124,9 +124,27 @@ class Usuarios extends Controller{
 
     public function listarUsuarios(){
         $usuario=new Usuario();
-        $datos['usuarios']=$usuario->orderBy('id')->findAll();
+        $datos['usuarios']=$usuario->orderBy('id', 'ASC')->findAll(); 
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');
         return view('admin/usuarios-admin', $datos);
+    }
+
+    public function baja($id=NULL){
+        $usuario = new Usuario();
+        $datosUsuario= $usuario->where('id', $id)->first();
+        if($datosUsuario['baja']=='no'){
+            $datosUsuario=[
+                'baja'=>'si'
+                
+            ];
+            $usuario->update($id, $datosUsuario);
+        }else{
+            $datosUsuario=[
+                'baja'=>'no'
+                ];
+                $usuario->update($id, $datosUsuario);
+        }
+        return $this->response->redirect(site_url('usuariosAdmin'));
     }
 }

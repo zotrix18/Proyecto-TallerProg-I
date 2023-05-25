@@ -1,6 +1,6 @@
 <?=$cabecera?>
 
-<div class="container">
+<div class="container my-5 shadow-lg p-3 mb-5 bg-body rounded ">
     <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Ingresar Datos del producto:</h5>
@@ -48,18 +48,20 @@
                             name="stock">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group pl-5 my-4 ">
                             <label for="imagen">Imagen:</label>
-                            <img class="img-thumbnail" 
-                                src="<?=base_url()?>uploads/<?=$producto['imagen'];?>" 
-                                alt="thumbnail"
-                                width=10%;>
+                            <div class="text-center">
+                                <img class=" text-center img-thumbnail mx-5 " 
+                                    src="<?=base_url()?>uploads/<?=$producto['imagen'];?>" 
+                                    alt="thumbnail"
+                                    width=10%;>
+                            </div>
                                 <br>
-                            <input id="imagen" class="form-control" type="file" name="imagen">
+                            <input id="imagen" class="form-control my-4" type="file" name="imagen">
                         </div>
-
-                    <button class="btn btn-success" type="subtmit">Guardar</button>
-
+                    <div class="my-4 text-center">
+                        <button class="btn btn-success " type="subtmit">Guardar</button>
+                    </div>
                     </form>            
 
 

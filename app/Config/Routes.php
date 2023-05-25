@@ -80,5 +80,6 @@ $routes->get('productosAdmin', 'Admins::productosAdmin');
 $routes->get('añadir', 'Admins::añadir');
 $routes->post('guardar', 'Productos::guardar');
 $routes->get('editar/(:num)', 'Productos::editar/$1');
-$routes->get('mensajesAdmin', 'Admins::mensajes');
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
+$routes->get('baja/(:num)', 'Usuarios::baja/$1');
+$routes->get('mensajes', 'Mensajes::listar');
