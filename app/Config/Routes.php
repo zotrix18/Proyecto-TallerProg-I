@@ -71,6 +71,11 @@ $routes->get('/login', 'Usuarios::login');
 $routes->post('iniciar', 'Usuarios::iniciar');
 //inicio Sesion
 $routes->get('logout', 'Usuarios::logout');
+//catalogo
+$routes->get('catalogo', 'Productos::listar');
+//Carrito
+$routes->get('agregarCarrito/(:num)', 'Compras::agregarCarrito/$1');
+
 
 
 //Usuario Admin

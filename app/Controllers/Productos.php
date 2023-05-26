@@ -51,4 +51,12 @@ class Productos extends Controller{
         $datos['pie']= view('template/footer.php');
         return view('admin/editar-admin.php', $datos);
     }
+
+    public function listar(){
+        $productos = new Producto();
+        $datos['productos']= $productos->orderBy('id', 'ASC')->findAll();
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        return view('catalogo.php', $datos);
+    }
 }

@@ -33,50 +33,31 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a></li>    
-            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
+            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/catalogo">Catalogo</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Consultas</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/comercializacion">Comercializacion</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/tyc">Terminos y Condiciones</a></li>
-        
-        <div class="justify-content-end list-unstyled">
-            <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="" alt="">
-                Hola <?=$nombre?>, <?=$apellido?>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="<?=site_url('logout')?>">Salir</a></li>
-              </ul>
-            </li>
-        </div>
         </div>
 
+        <div>
 
+          <div class="list-unstyled listS">
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/svg/solid/user.svg" width="15wv" alt="logoUser">
+                  Hola <?=$nombre?>, <?=$apellido?>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="<?=site_url('logout')?>">Salir</a></li>
+                </ul>
+              </li>
+          </div>
+          
+          <div class="text-end">
+            <a href=""><img src="assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
+          </div>
+       </div>
 
-<!-- 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Action2</a></li>
-                <li><a class="dropdown-item" href="#">Action3</a></li>
-              </ul>
-            </li> -->
-
-
-
-
-
-
-            
-            
-            
-        </div>
-        </div>
       </div>
     </nav>
     
@@ -93,7 +74,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/contacto">Contacto</a></li>
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/nosotros">Quienes Somos</a></li>    
-            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Catalogo</a></li>            
+            <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/catalogo">Catalogo</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/enConstruccion">Consultas</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/comercializacion">Comercializacion</a></li>            
             <li class="nav-item"><a class="nav-link" href="http://localhost/proyecto_quintana/public/tyc">Terminos y Condiciones</a></li>
