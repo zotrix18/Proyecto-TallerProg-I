@@ -11,6 +11,7 @@
 
     <?php
     $session=session();
+    $cart_counter = $session->get('cart_counter');
     $logSesion = $session->get('usuario');
     //si esta logeado
     if($session->has('usuario')){
@@ -54,7 +55,8 @@
           </div>
           
           <div class="text-end">
-            <a href=""><img src="assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
+            <a href="http://localhost/proyecto_quintana/public/carrito"><img src="assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
+            <span>(<?=$cart_counter?>)</span>
           </div>
        </div>
 

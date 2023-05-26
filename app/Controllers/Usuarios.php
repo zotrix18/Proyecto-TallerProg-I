@@ -43,6 +43,7 @@ class Usuarios extends Controller{
         
         $session = session();
         $session->set('usuario', $nick);
+        $session->set('cart_counter', 0);
 
         if(!($id_user==2)){
         return $this->response->redirect(site_url('/'));
