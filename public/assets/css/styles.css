@@ -195,3 +195,7 @@ body{
     margin-top: 10%;
 }
 
+@media screen and (min-width: 992px) {
+    /* Reglas de estilo para pantallas con un ancho mínimo de 992px */
+    /* Aquí puedes añadir los estilos que deseas aplicar */
+  }
