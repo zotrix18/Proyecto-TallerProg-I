@@ -11,7 +11,7 @@
 
     <?php
     $session=session();
-    $cart_counter = $session->get('carrito_counter');
+    $cart_counter = $session->get('cart_counter');
     $logSesion = $session->get('usuario');
     //si esta logeado
     if($session->has('usuario')){
