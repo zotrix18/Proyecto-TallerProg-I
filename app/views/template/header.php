@@ -56,6 +56,8 @@
           
           <div class="text-end">
             <a href="http://localhost/proyecto_quintana/public/carrito"><img src="assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
+              
+
             <span>(<?=$cart_counter?>)</span>
           </div>
        </div>

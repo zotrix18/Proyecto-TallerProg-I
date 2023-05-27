@@ -7,7 +7,7 @@
     
 <div class="table-responsive conteiner mx-5 shadow-sm p-3 my-5 bg-body rounded">
     <?php if($counter == 0){ ?>
-        <div class="text-center">Carro vacío</div>
+        <div class="text-center fs-1">Carro vacío</div>
     <?php } else { ?>
         <table class="table">
             <thead>
@@ -56,13 +56,16 @@
 
            </tbody>
         </table>
-    <div class="conteiner">
-        <div class="text-center my-3">
-            <a href="<?= base_url('limpiar'); ?>"><button class="btn btn-danger" type="button">Limpiar Carrito</button></a>
-        </div>
-        <div class="text-center">
-            <a href="<?= base_url('continuar'); ?>"><button class="btn btn-success" type="button">Continuar con la compra</button></a>
-        </div>
-    </div>
+    <?php
+        if($counter != 0){ ?>
+            <div class="conteiner">
+                <div class="text-center my-3">
+                    <a href="<?= base_url('limpiar'); ?>"><button class="btn btn-danger" type="button">Limpiar Carrito</button></a>
+                </div>
+                <div class="text-center">
+                    <a href="<?= base_url('continuar'); ?>"><button class="btn btn-success" type="button">Continuar con la compra</button></a>
+                </div>
+            </div>
+        <?php } ?>
 </div>
 <?=$pie?>

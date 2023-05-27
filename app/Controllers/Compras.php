@@ -14,13 +14,16 @@ class Compras extends Controller{
         $counter = ($session->get('cart_counter')+1);
         $carrito2 =  $session->get('carro'); //traigo de nuevo la variable que en su momento fue carrito2 para darle formato de array
 
-        for($i=0 ; $i < count($carrito2) ; $i++){
-            $item = $carrito2[$i];
-            if($seleccionProd['id'] == $item['id_producto']){
-                //Se esta intentando agregar el mismo elemento
-                return $this->response->redirect(base_url('sumar/' . $i));
-                }
-         }
+        if($carrito2!=NULL){    
+            for($i=0 ; $i < count($carrito2) ; $i++){
+                $item = $carrito2[$i];
+                if($seleccionProd['id'] == $item['id_producto']){
+                    //Se esta intentando agregar el mismo elemento
+                    return $this->response->redirect(base_url('sumar/' . $i));
+                    }
+            }
+        }
+         
         $carrito2[] = [
             'id_producto' => $seleccionProd['id'],
             'nombre' => $seleccionProd['nombre'],
@@ -110,5 +113,13 @@ class Compras extends Controller{
         $carrito2[$idCart] = $compraMOD;
         $session->set('carro', $carrito2);
         return $this->response->redirect(base_url('carrito'));
+    }
+
+    public function limpiar(){
+        $session = session();
+        $carrito2 = [];
+        $session -> set ('carro', NULL);
+        $session -> set ('cart_counter', 0);
+        return $this->response->redirect(base_url('catalogo'));
     }
 }
