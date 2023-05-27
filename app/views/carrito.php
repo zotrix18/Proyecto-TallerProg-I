@@ -31,6 +31,7 @@
 
                     $cartKey = 'cart' . $i;
                     $datoCarro = $session->get($cartKey);
+                    //si el contenido es null es porque se ha borrado, entonces se omite
                     if($datoCarro != NULL){?>
                         <tr>
                         <td><?=$counter2?></td>
@@ -55,6 +56,7 @@
                         <td>$<?= $datoCarro['importe_unitario'] ?></td>
                         <td>$<?= $datoCarro['importe'] ?></td>
                         <td><a href="<?=base_url('quitar/'.$i);?>"><button class="btn btn-danger" type="button">Quitar</button></a> </td>
+                        <!-- ya que el contenido de $i es la iteracion real dentro de session, se usa como id -->
                     </tr>
                 <?php }else{
                     $counter2=$counter2-1; } ?>
