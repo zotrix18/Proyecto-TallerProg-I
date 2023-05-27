@@ -76,7 +76,7 @@ $routes->get('catalogo', 'Productos::listar');
 //Carrito
 $routes->get('agregarCarrito/(:num)', 'Compras::agregarCarrito/$1');
 $routes->get('carrito', 'Compras::carrito');
-$routes->get('quitar/(:num)', 'Compras::quitarItemCarrito/$1');
+$routes->get('quitar/(:any)', 'Compras::quitarItemCarrito/$1');
 $routes->get('restar/(:any)', 'Compras::restar/$1');
 $routes->get('sumar/(:any)', 'Compras::sumar/$1');
 

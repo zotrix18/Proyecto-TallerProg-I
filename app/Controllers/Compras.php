@@ -8,25 +8,49 @@ use App\Models\Producto;
 class Compras extends Controller{
 
     public function agregarCarrito($id = NULL){
-        $productos=new Producto();
+        $productos = new Producto();
         $seleccionProd = $productos->where('id', $id)->first();
-        $session=session();
-        $counter = $session ->get('cart_counter');
-        $session->set('cart_counter', $counter + 1);
-        $session->set('carrito_counter', $counter + 1);
-        $cartKey= 'cart'.$counter;
-        $datosCart=[
-            'id_producto'=>$seleccionProd['id'],
-            'nombre'=> $seleccionProd['nombre'],
-            'cantidad'=>1,
-            'importe_unitario'=>$seleccionProd['precio'],
-            'importe'=> 1*$seleccionProd['precio'],
-            'fecha'=>date('d-m-y')
-        ];
-        
-        $session->set($cartKey, $datosCart);
+        $session = session();
+        $counter = $session->get('cart_counter');
+
+        // Verificar si el producto ya existe en el carrito
+        $carrito = [];
+        //bandera que detecta si es existente o no
+        $productoExistente = false;
+        for ($i = 0; $i < $counter; $i++) {
+            $cartKey = 'cart' . $i;
+            $item = $session->get($cartKey);
+            if ($item['id_producto'] === $seleccionProd['id']) {
+                // El producto ya existe en el carrito, incrementar la cantidad
+                $item['cantidad'] += 1;
+                $item['importe'] = $item['cantidad'] * $item['importe_unitario'];
+                $session->set($cartKey, $item);
+                $productoExistente = true;
+                break;
+            }
+            $carrito[$cartKey] = $item;
+        }
+
+        if (!$productoExistente) {
+            $cartKey = 'cart' . $counter;
+            $datosCart = [
+                'id_producto' => $seleccionProd['id'],
+                'nombre' => $seleccionProd['nombre'],
+                'cantidad' => 1,
+                'importe_unitario' => $seleccionProd['precio'],
+                'importe' => 1 * $seleccionProd['precio'],
+                'fecha' => date('d-m-y')
+            ];
+            
+            $session->set($cartKey, $datosCart);
+            $carrito[$cartKey] = $datosCart;
+            $session->set('cart_counter', $counter + 1);
+            $session->set('carrito_counter', $counter + 1);
+        }
+
         return $this->response->redirect(base_url('catalogo'));
-    }
+}
+
 
     public function carrito(){
         $session = session();
@@ -43,15 +67,15 @@ class Compras extends Controller{
         return view('carrito.php', $datos);
     }
 
-    public function quitarItemCarrito($idCart = NULL){
-        $cartKey = 'cart'. $idCart;
+    public function quitarItemCarrito($cartKey = NULL){
         $session = session();
         $session->remove($cartKey);
         $counter= $session->get('cart_counter');
         $session->set('cart_counter', ($counter - 1));
-        
+
         return $this->response->redirect(base_url('carrito'));
     }
+    
 
     public function sumar($cartKey = NULL){
         $session = session();
