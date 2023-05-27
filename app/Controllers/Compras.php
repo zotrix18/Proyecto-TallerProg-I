@@ -57,23 +57,44 @@ class Compras extends Controller{
         $session = session();
         $productos=new Producto();
         $compra = $session->get($cartKey);
-        var_dump($compra['id']);
-        // $seleccionProd = $productos->where('id', $id)->first();
-       
-        // $cant = ($compra['cantidad']+1);      
+        // var_dump($compra);
 
-        // $compraMOD = [
-        //     'id_producto'=> $seleccionProd['id'],
-        //     'nombre'=> $seleccionProd['nombre'],
-        //     'cantidad'=> $cant,
-        //     'importe_unitario'=> $seleccionProd['precio'],
-        //     'importe'=> $cant * $seleccionProd['precio'],
-        //     'fecha'=> date('d-m-y')
-        // ];
+        $seleccionProd = $productos->where('id', $compra['id_producto'])->first();
+       
+        $cant = ($compra['cantidad']+1);      
+
+        $compraMOD = [
+            'id_producto'=> $seleccionProd['id'],
+            'nombre'=> $seleccionProd['nombre'],
+            'cantidad'=> $cant,
+            'importe_unitario'=> $seleccionProd['precio'],
+            'importe'=> $cant * $seleccionProd['precio'],
+            'fecha'=> date('d-m-y')
+        ];
         
-        // var_dump($compraMOD);
-        // $session->set($cartKey, $compraMOD);
-        // return $this->response->redirect(base_url('carrito'));
+        $session->set($cartKey, $compraMOD);
+        return $this->response->redirect(base_url('carrito'));
     }
     
+    public function restar($cartKey = NULL){
+        $session = session();
+        $productos=new Producto();
+        $compra = $session->get($cartKey);
+
+        $seleccionProd = $productos->where('id', $compra['id_producto'])->first();
+       
+        $cant = ($compra['cantidad']-1);      
+
+        $compraMOD = [
+            'id_producto'=> $seleccionProd['id'],
+            'nombre'=> $seleccionProd['nombre'],
+            'cantidad'=> $cant,
+            'importe_unitario'=> $seleccionProd['precio'],
+            'importe'=> $cant * $seleccionProd['precio'],
+            'fecha'=> date('d-m-y')
+        ];
+        
+        $session->set($cartKey, $compraMOD);
+        return $this->response->redirect(base_url('carrito'));
+    }
 }
