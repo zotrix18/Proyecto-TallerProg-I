@@ -43,6 +43,7 @@ class Usuarios extends Controller{
         
         $session = session();
         $session->set('usuario', $nick);
+        $session->set('carrito_counter', 0);
         $session->set('cart_counter', 0);
 
         if(!($id_user==2)){

@@ -42,7 +42,7 @@
 
         <div>
 
-          <div class="list-unstyled listS">
+          <div class="list-unstyled">
               <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="assets/svg/solid/user.svg" width="15wv" alt="logoUser">

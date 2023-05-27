@@ -13,8 +13,8 @@ class Compras extends Controller{
         $session=session();
         $counter = $session ->get('cart_counter');
         $session->set('cart_counter', $counter + 1);
+        $session->set('carrito_counter', $counter + 1);
         $cartKey= 'cart'.$counter;
-        // var_dump($cartKey);
         $datosCart=[
             'id_producto'=>$seleccionProd['id'],
             'nombre'=> $seleccionProd['nombre'],
@@ -47,8 +47,33 @@ class Compras extends Controller{
         $cartKey = 'cart'. $idCart;
         $session = session();
         $session->remove($cartKey);
-        $session->set('cart_counter', $counter - 1);
+        $counter= $session->get('cart_counter');
+        $session->set('cart_counter', ($counter - 1));
+        
         return $this->response->redirect(base_url('carrito'));
+    }
+
+    public function sumar($cartKey = NULL){
+        $session = session();
+        $productos=new Producto();
+        $compra = $session->get($cartKey);
+        var_dump($compra['id']);
+        // $seleccionProd = $productos->where('id', $id)->first();
+       
+        // $cant = ($compra['cantidad']+1);      
+
+        // $compraMOD = [
+        //     'id_producto'=> $seleccionProd['id'],
+        //     'nombre'=> $seleccionProd['nombre'],
+        //     'cantidad'=> $cant,
+        //     'importe_unitario'=> $seleccionProd['precio'],
+        //     'importe'=> $cant * $seleccionProd['precio'],
+        //     'fecha'=> date('d-m-y')
+        // ];
+        
+        // var_dump($compraMOD);
+        // $session->set($cartKey, $compraMOD);
+        // return $this->response->redirect(base_url('carrito'));
     }
     
 }
