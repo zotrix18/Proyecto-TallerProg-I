@@ -3,6 +3,7 @@
     $session = session();
     $counter = $session->get('cart_counter');
     $carrito2 = $session->get('carro');
+    $total = $session->get('total', 0);
     ?>
     
 <div class="table-responsive conteiner mx-5 shadow-sm p-3 my-5 bg-body rounded">
@@ -26,7 +27,9 @@
                 for ($i = 0; $i <= count($carrito2); $i++) {
                     $cartKey = 'cart' . $i;
                      if(isset($carrito2[$i])){
-                        $datoCarro = $carrito2[$i];?>
+                        $datoCarro = $carrito2[$i];
+                        $total = $total + $datoCarro['importe'];
+                        ?>
                         <tr>
                             <td>#<?= ($i+1) ?></td>
                             <td><?= $datoCarro['nombre'] ?></td>
@@ -60,17 +63,23 @@
         if($counter != 0){ ?>
         
         <div class="conteiner">
-            <div>
-                <div></div>
-                    <div>
-                        <div class="text-center my-3">
-                            <a href="<?= base_url('limpiar'); ?>"><button class="btn btn-danger" type="button">Limpiar Carrito</button></a>
-                        </div>
-                        <div class="text-center">
-                            <a href="<?= base_url('continuar'); ?>"><button class="btn btn-success" type="button">Continuar con la compra</button></a>
-                        </div>
+            <div  class="row">
+                <div class="col-sm-4">
+
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="text-center my-3">
+                        <a href="<?= base_url('limpiar'); ?>"><button class="btn btn-danger" type="button">Limpiar Carrito</button></a>
                     </div>
-                    <div> </div>
+                    <div class="text-center">
+                        <a href="<?= base_url('continuar'); ?>"><button class="btn btn-success" type="button">Continuar con la compra</button></a>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 ">
+                    <p class="fs-4 d-line">TOTAL: $<?=$total?> </p>
+                </div>
             </div>
         </div>
         <?php } ?>
