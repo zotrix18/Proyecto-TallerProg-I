@@ -58,14 +58,21 @@
         </table>
     <?php
         if($counter != 0){ ?>
-            <div class="conteiner">
-                <div class="text-center my-3">
-                    <a href="<?= base_url('limpiar'); ?>"><button class="btn btn-danger" type="button">Limpiar Carrito</button></a>
-                </div>
-                <div class="text-center">
-                    <a href="<?= base_url('continuar'); ?>"><button class="btn btn-success" type="button">Continuar con la compra</button></a>
-                </div>
+        
+        <div class="conteiner">
+            <div>
+                <div></div>
+                    <div>
+                        <div class="text-center my-3">
+                            <a href="<?= base_url('limpiar'); ?>"><button class="btn btn-danger" type="button">Limpiar Carrito</button></a>
+                        </div>
+                        <div class="text-center">
+                            <a href="<?= base_url('continuar'); ?>"><button class="btn btn-success" type="button">Continuar con la compra</button></a>
+                        </div>
+                    </div>
+                    <div> </div>
             </div>
+        </div>
         <?php } ?>
 </div>
 <?=$pie?>
