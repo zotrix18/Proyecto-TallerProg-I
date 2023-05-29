@@ -4,6 +4,7 @@
     $counter = $session->get('cart_counter');
     $carrito2 = $session->get('carro');
     $total = $session->get('total', 0);
+    $total=0;
     ?>
     
 <div class="table-responsive conteiner mx-5 shadow-sm p-3 my-5 bg-body rounded">
@@ -25,7 +26,7 @@
                 <?php
                 
                 for ($i = 0; $i <= count($carrito2); $i++) {
-                    $cartKey = 'cart' . $i;
+                   
                      if(isset($carrito2[$i])){
                         $datoCarro = $carrito2[$i];
                         $total = $total + $datoCarro['importe'];
@@ -79,9 +80,14 @@
 
                 <div class="col-sm-4 ">
                     <p class="fs-4 d-line">TOTAL: $<?=$total?> </p>
+                    
                 </div>
             </div>
         </div>
         <?php } ?>
+        
+        <?php
+            $session->set('total', $total);
+        ?>
 </div>
 <?=$pie?>
