@@ -26,7 +26,7 @@ class ComprasConfirmadas extends Controller{
         if($this->request->getVar('tarjeta') != null){
            
            //es credito
-            if($this->request->getVar('cuota') != 1){
+            
                 // var_dump($this->request->getVar('tarjeta'));
                 if ($this->request->getVar('cuota')==3) {
                             $total = ($total*1.21);
@@ -72,7 +72,7 @@ class ComprasConfirmadas extends Controller{
 
                 // var_dump($datos);
                 
-                // $compra->insert($datos);
+                $compra->insert($datos);
                 $datos = [];//limpieza del array datos
                 $productos = new Producto();
                 $detComs = new DetCom();
@@ -99,11 +99,43 @@ class ComprasConfirmadas extends Controller{
 
 
 
+                }else{//es efectivo
+                    $compra = new Compra();
+                    $datos = [
+                        'total' => $total,
+                        'id_usuario' => $userInfo['id'],
+                        'metodo_pago' => 1,
+                        'numero_tarjeta' =>'cheque/Efectivo',
+                        'cuotas' => 1,
+                        'envio'=> 'presencial',
+                        'direccion' => 'no aplica',
+                        'fecha_alta' => date('d-m-y')
+                    ];
+                    $compra->insert($datos);
+                    $datos = [];//limpieza del array datos
+                    $productos = new Producto();
+                    $detComs = new DetCom();
+                    $compras =  $compra->where('id_usuario', $userInfo['id'])->orderBy('id', 'DESC')->first();
+                    // var_dump($compras['id']);//id unico por compra
+                    $carrito2 = $session->get('carro');
+                    for ($i = 0; $i < count($carrito2); $i++) {
+                        if(isset($carrito2[$i])){
+                        $datoCarro = $carrito2[$i];
+                        $total = $total + $datoCarro['importe'];
+                        $datos = [
+                            'id_compra' => $compras['id'],
+                            'id_producto' => $datoCarro['id_producto'],
+                            'nombre' => $datoCarro['nombre'],
+                            'cantidad' => $datoCarro['cantidad'],
+                            'importe_unitario' => $datoCarro['importe_unitario'],
+                            'importe' => $datoCarro['importe'],
+                            'fecha' => $datoCarro['fecha']
+                        ];
+                            }
+                            $detComs->insert($datos);
 
-                }
-
-                }else{
-                    //es efectivo
+                        }
+                    
                 }
             }
         
