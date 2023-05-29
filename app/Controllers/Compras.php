@@ -122,4 +122,10 @@ class Compras extends Controller{
         $session -> set ('cart_counter', 0);
         return $this->response->redirect(base_url('catalogo'));
     }
+
+    public function continuar(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        return view('continuar.php', $datos);
+    }
 }

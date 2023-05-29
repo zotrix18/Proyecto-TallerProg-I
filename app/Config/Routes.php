@@ -80,6 +80,10 @@ $routes->get('quitar/(:num)', 'Compras::quitarItemCarrito/$1');
 $routes->get('restar/(:num)', 'Compras::restar/$1');
 $routes->get('sumar/(:num)', 'Compras::sumar/$1');
 $routes->get('limpiar', 'Compras::limpiar');
+//Continuar Compra
+$routes->get('continuar', 'Compras::continuar');
+
+
 
 //Usuario Admin
 $routes->get('inicio', 'Admins::inicio');

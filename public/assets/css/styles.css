@@ -200,3 +200,10 @@ body{
         justify-content: end!important;
     }
   }
+
+.sep{
+    margin-right: 18rem!important;
+    margin-left: 18rem!important;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
