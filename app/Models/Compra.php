@@ -7,10 +7,13 @@ class Compra extends Model{
     protected $table      = 'compras';
     protected $primaryKey = 'id';
     protected $allowedFields= [
-        'folio',
         'total',
         'id_usuario',
-        'activo',
+        'metodo_pago',
+        'numero_tarjeta',
+        'cuotas',
+        'envio',
+        'direccion',
         'fecha_alta'
     ];
 }

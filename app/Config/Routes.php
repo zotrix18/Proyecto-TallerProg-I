@@ -83,7 +83,8 @@ $routes->get('limpiar', 'Compras::limpiar');
 //Continuar Compra
 $routes->get('pago', 'Compras::pago');
 $routes->get('continuar', 'Compras::continuar');
-
+//procesamiento pago
+$routes->post('confirmarPago', 'ComprasConfirmadas::confirmarPago');
 
 
 //Usuario Admin
