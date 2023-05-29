@@ -202,8 +202,18 @@ body{
   }
 
 .sep{
-    margin-right: 18rem!important;
-    margin-left: 18rem!important;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-right: 25vw!important;
+    margin-left: 25vw!important;
+    margin-top: 6vw;
+    margin-bottom: 6vw;
 }
+
+.stacked-box{
+    text-align: center;
+    position: relative;
+    width: 15vw;
+    height: 4vw;
+    margin-top: 2vw;
+    margin-left: 10vw!important;
+}
+

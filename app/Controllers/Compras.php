@@ -128,4 +128,10 @@ class Compras extends Controller{
         $datos['pie']= view('template/footer.php');
         return view('continuar.php', $datos);
     }
+
+    public function pago(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        return view('pago.php', $datos);
+    }
 }

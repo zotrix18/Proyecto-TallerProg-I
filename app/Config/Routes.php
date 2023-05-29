@@ -81,6 +81,7 @@ $routes->get('restar/(:num)', 'Compras::restar/$1');
 $routes->get('sumar/(:num)', 'Compras::sumar/$1');
 $routes->get('limpiar', 'Compras::limpiar');
 //Continuar Compra
+$routes->get('pago', 'Compras::pago');
 $routes->get('continuar', 'Compras::continuar');
 
 
