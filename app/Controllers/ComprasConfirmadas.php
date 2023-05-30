@@ -137,7 +137,13 @@ class ComprasConfirmadas extends Controller{
                         }
                     
                 }
-            }
+    }
+
+    public function animacion(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        return view('animacion.php', $datos);
+    }
         
         
 
