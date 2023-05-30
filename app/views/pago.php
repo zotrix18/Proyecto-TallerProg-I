@@ -19,7 +19,7 @@
             <div>
               <form method="post" action="<?=site_url('/confirmarPago')?>" enctype="multipart/form-data">
                 <p>Te esperamos en nuestro local de Av. Libertad 5289 de 8hs a 12hs y 17hs a 21hs, acercate con esta factura o con el numero de factura</p>
-                <button class="btn btn-success" type="submit">Confirmar Compra</button>
+                <button class="btn btn-success" type="submit">Confirmar Pago</button>
               </form>
             </div>
         </div>
@@ -82,7 +82,7 @@
                     </div>
 
 
-                    <button class="btn btn-success" type="submit">Confirmar Compra</button>
+                    <button class="btn btn-success" type="submit">Confirmar Pago</button>
                 </form>
             </div>
         </div>

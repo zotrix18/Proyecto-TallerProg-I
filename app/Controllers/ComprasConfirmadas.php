@@ -73,6 +73,8 @@ class ComprasConfirmadas extends Controller{
                 // var_dump($datos);
                 
                 $compra->insert($datos);
+                $idCompra = $compra->getInsertID();
+                $session ->set ('idComprobante', $idCompra);
                 $datos = [];//limpieza del array datos
                 $productos = new Producto();
                 $detComs = new DetCom();
@@ -100,22 +102,32 @@ class ComprasConfirmadas extends Controller{
 
 
                 }else{//es efectivo
+
+                    $metodo_pago = 1;
+                    $tarjeta = 'cheque/Efectivo';
+                    $cuotas = 1;
+                    $envio = 'presencial';
+                    $direccion = 'no aplica';
+                    $fecha = date('d-m-y');
+
                     $compra = new Compra();
                     $datos = [
                         'total' => $total,
                         'id_usuario' => $userInfo['id'],
-                        'metodo_pago' => 1,
-                        'numero_tarjeta' =>'cheque/Efectivo',
-                        'cuotas' => 1,
-                        'envio'=> 'presencial',
-                        'direccion' => 'no aplica',
-                        'fecha_alta' => date('d-m-y')
+                        'metodo_pago' => $metodo_pago,
+                        'numero_tarjeta' =>$tarjeta,
+                        'cuotas' => $cuotas,
+                        'envio'=> $envio,
+                        'direccion' => $direccion,
+                        'fecha_alta' => $fecha
                     ];
                     $compra->insert($datos);
+                    $idCompra = $compra->getInsertID();
+                    $session ->set ('idComprobante', $idCompra);
                     $datos = [];//limpieza del array datos
                     $productos = new Producto();
                     $detComs = new DetCom();
-                    $compras =  $compra->where('id_usuario', $userInfo['id'])->orderBy('id', 'DESC')->first();
+                    
                     // var_dump($compras['id']);//id unico por compra
                     $carrito2 = $session->get('carro');
                     for ($i = 0; $i < count($carrito2); $i++) {
@@ -123,7 +135,7 @@ class ComprasConfirmadas extends Controller{
                         $datoCarro = $carrito2[$i];
                         $total = $total + $datoCarro['importe'];
                         $datos = [
-                            'id_compra' => $compras['id'],
+                            'id_compra' => $idCompra,
                             'id_producto' => $datoCarro['id_producto'],
                             'nombre' => $datoCarro['nombre'],
                             'cantidad' => $datoCarro['cantidad'],
@@ -138,6 +150,7 @@ class ComprasConfirmadas extends Controller{
                     
                 }
 
+        
         return $this->response->redirect(base_url('procesando'));
     }
 

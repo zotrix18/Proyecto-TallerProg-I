@@ -74,7 +74,7 @@
                         <a href="<?= base_url('limpiar'); ?>"><button class="btn btn-danger" type="button">Limpiar Carrito</button></a>
                     </div>
                     <div class="text-center">
-                        <a href="<?= base_url('pago'); ?>"><button class="btn btn-success" type="button">Continuar con la compra</button></a>
+                        <a href="<?= base_url('pago'); ?>"><button class="btn btn-success" type="button">Confirmar compra</button></a>
                     </div>
                 </div>
 
