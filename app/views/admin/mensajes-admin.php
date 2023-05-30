@@ -37,7 +37,7 @@
                 </div>
               
               </div>
-              <a class="btn btn-info" href="<?=base_url('leido/'.$mensaje['id']);?>">Baja</a>
+              <a class="btn btn-info" href="<?=base_url('leido/'.$mensaje['id']);?>">Leido</a>
             </div>
           </div>
       <?php }

@@ -5,6 +5,7 @@
 
 
 <div class="shadow p-3 mb-5 mx-5 bg-body rounded conteiner">
+  
 <div class="ml-5">
   <a class="text-light btn btn-success m-2" href="<?=base_url('/añadir')?>" >Añadir Producto</a>
 </div>

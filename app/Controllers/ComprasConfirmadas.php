@@ -132,11 +132,13 @@ class ComprasConfirmadas extends Controller{
                             'fecha' => $datoCarro['fecha']
                         ];
                             }
-                            $detComs->insert($datos);
+                            $detComs->insert($datos);   
 
                         }
                     
                 }
+
+        return $this->response->redirect(base_url('procesando'));
     }
 
     public function animacion(){
