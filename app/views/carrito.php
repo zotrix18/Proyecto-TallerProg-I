@@ -3,7 +3,7 @@
     $session = session();
     $counter = $session->get('cart_counter');
     $carrito2 = $session->get('carro');
-    $total = $session->get('total', 0);
+    
     $total=0;
     ?>
     

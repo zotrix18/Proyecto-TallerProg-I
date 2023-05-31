@@ -2,15 +2,38 @@
 <?php
     $session=session();
     $logSession = $session->get('usuario');
+    
+    // $datos_compra= $datos['datos_compra'];
+    // $detalle_compra= $datos['detalle_compra'];
     $date = date('d-m-y');
     $carrito2 = $session->get('carro');
-    $total = $session->get('total', 0);
+    $total = $datos_compra['total'];
+    $total = number_format($total, 2, ',', '.');
+    
 
+    
+    if($datos_compra['metodo_pago'] == 1){
+        $metodo='Efectivo/Cheque';
+        $tarjeta=NULL;
+    }else{ 
+        $metodo = 'Credito/Debito  -' . 'Cuotas: ' . $datos_compra['cuotas'];
+        $tarjeta = '••••' . (substr($datos_compra['numero_tarjeta'], -4));
+        }
+
+    if($datos_compra['envio'] == 'oca'){
+        $envio ='OCA ' . $datos_compra['direccion'];
+    }elseif($datos_compra['envio'] == 'andreani'){ 
+        $envio ='Andreani ' . $datos_compra['direccion'];
+    }else{
+        $envio ='Retiro en sucursal Electro Voltaics';
+    }
+
+    $fecha =  date("d-m-y", strtotime($datos_compra['fecha_alta']));
 ?>
 <div  class="sep conteiner shadow-lg p-5 bg-body rounded">
     <div class="text-center">
         <p class="h2 text-center">FACTURA X</p>
-        <p class="h5 text-center">Fecha: <?=$date?></p>
+        <p class="h5 text-center">Fecha: <?=$fecha?></p>
     </div>
 
     <div class="conteiner my-5">
@@ -24,7 +47,7 @@
             </div>
             <div class="col-lg-2 col-sm-11 mt-5 border border-dark stacked-box">
                <p class="text-light bg-dark">FACTURA NUMERO:</p> 
-               <p>xxxxxx</p>
+               <p>000000000342-<?=$id_compra?></p>
             </div>
         </div>
     </div>
@@ -39,9 +62,15 @@
             </div>
             <div class="col-lg-1 col-sm-1"></div>
             <div class="col-lg-6 col-sm-11 mx-3 my-4 border border-dark">
-                <p>Fecha: <?=$date?></p>
-                <p>Forma de pago: $metodo</p>
-                <p>Forma de envio: $if-envio</p>
+                <p>Fecha: <?=$fecha?></p>
+                <p>Forma de pago: <?=$metodo?></p>
+                <?php
+                if($tarjeta != NULL) { ?>
+                    <p>Tarjeta: <?=$tarjeta?></p>
+                <?php
+                }
+                ?>
+                <p>Forma de envio: <?=$envio?></p>
             </div>
         </div>
     </div>
@@ -61,11 +90,9 @@
                 <tbody>
                     <?php
                     
-                    for ($i = 0; $i <= count($carrito2); $i++) {
-                        $cartKey = 'cart' . $i;
-                        if(isset($carrito2[$i])){
-                            $datoCarro = $carrito2[$i];
-                            $total = $total + $datoCarro['importe'];
+                    for ($i = 0; $i <= count($detalle_compra); $i++) {
+                        if(isset($detalle_compra[$i])){
+                            $datoCarro = $detalle_compra[$i];
                             ?>
                             <tr>
                                 <td>#<?=($i+1) ?></td>

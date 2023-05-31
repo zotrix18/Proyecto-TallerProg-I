@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electro Voltaics S.A.</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity=" " crossorigin="">
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/js/jquery.min.js">
+    <link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css')?>" integrity=" " crossorigin="">
+    <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
+    <link rel="stylesheet" href="/proyecto_quintana/public/assets/css/styles.css">
+    <link rel="stylesheet" href="<?=base_url('assets/js/jquery.min.js')?>">
 
     <?php
     $session=session();
@@ -45,17 +45,18 @@
           <div class="list-unstyled">
               <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="assets/svg/solid/user.svg" width="15wv" alt="logoUser">
+                  <img src="/proyecto_quintana/public/assets/svg/solid/user.svg" width="15wv" alt="logoUser">
                   Hola <?=$nombre?>, <?=$apellido?>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="<?=site_url('mis-compras')?>">Mis Facturas</a></li>
                   <li><a class="dropdown-item" href="<?=site_url('logout')?>">Salir</a></li>
                 </ul>
               </li>
           </div>
           
           <div class="text-end">
-            <a href="http://localhost/proyecto_quintana/public/carrito"><img src="assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
+            <a href="http://localhost/proyecto_quintana/public/carrito"><img src="/proyecto_quintana/public/assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
               
 
             <span>(<?=$cart_counter?>)</span>

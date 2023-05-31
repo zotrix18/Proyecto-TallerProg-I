@@ -85,7 +85,7 @@ $routes->get('pago', 'Compras::pago');
 //procesamiento pago
 $routes->post('confirmarPago', 'ComprasConfirmadas::confirmarPago');
 $routes->get('procesando', 'ComprasConfirmadas::animacion');
-$routes->get('comprobante', 'Compras::continuar');
+$routes->get('comprobante/(:num)', 'ComprasConfirmadas::comprobante/$1');
 
 //Usuario Admin
 $routes->get('inicio', 'Admins::inicio');
@@ -101,3 +101,6 @@ $routes->get('baja/(:num)', 'Usuarios::baja/$1');
 $routes->get('mensajes', 'Mensajes::listar');
 $routes->get('leido/(:num)', 'Mensajes::leido/$1');
 $routes->post('recepMensaje', 'Mensajes::mensajeContacto');
+
+//Usuario
+$routes->get('mis-compras', 'Usuarios::mis_compras');

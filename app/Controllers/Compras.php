@@ -29,7 +29,7 @@ class Compras extends Controller{
             'nombre' => $seleccionProd['nombre'],
             'cantidad' => 1,
             'importe_unitario' => $seleccionProd['precio'],
-            'importe' => 1 * $seleccionProd['precio'],
+            'importe' =>$seleccionProd['precio'],
             'fecha' => date('d-m-y')
         ];
         $carrito2 = array_values($carrito2);
@@ -67,7 +67,6 @@ class Compras extends Controller{
         return $this->response->redirect(base_url('carrito'));
     }
     
-
     public function sumar($idCart = NULL){
         $session = session();
         $productos=new Producto();
@@ -81,7 +80,7 @@ class Compras extends Controller{
             'nombre' => $seleccionProd['nombre'],
             'cantidad'=> $cant,
             'importe_unitario' => $seleccionProd['precio'],
-            'importe'=> $cant * $item['importe'],
+            'importe'=> ($cant * $seleccionProd['precio']),
             'fecha' => date('d-m-y')
         ];
         $carrito2[$idCart] = $compraMOD;
@@ -121,12 +120,6 @@ class Compras extends Controller{
         $session -> set ('carro', NULL);
         $session -> set ('cart_counter', 0);
         return $this->response->redirect(base_url('catalogo'));
-    }
-
-    public function continuar(){
-        $datos['cabecera']= view('template/header.php');
-        $datos['pie']= view('template/footer.php');
-        return view('continuar.php', $datos);
     }
 
     public function pago(){

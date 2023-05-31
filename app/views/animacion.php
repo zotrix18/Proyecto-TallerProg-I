@@ -1,4 +1,8 @@
 <?=$cabecera?>
+<?php
+$session = session();
+$idComp = $session->get('idComprobante');
+?>
 <br><br><br><br><br><br><br><br>
 <div class="conteiner text-center">
     <div class="spinner-grow saltito text-primary" role="status">
@@ -26,9 +30,9 @@
 <br><br><br><br><br><br><br><br>
 
 <script>
-        setTimeout(function() {
-            window.location.href = 'http://localhost/proyecto_quintana/public/comprobante';
-        }, 3000); // Espera 5 segundos (5000 ms) antes de redirigir
-    </script>
-
-<?=$pie?>
+    setTimeout(function() {
+        var idComprobante = <?=$idComp?>;
+        var url = 'http://localhost/proyecto_quintana/public/comprobante/' + idComprobante;
+        window.location.href = url;
+    }, 3000);
+</script>

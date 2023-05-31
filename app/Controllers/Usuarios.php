@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\Usuario;
+use App\Models\Compra;
 class Usuarios extends Controller{
 
     public function login(){
@@ -147,5 +148,17 @@ class Usuarios extends Controller{
                 $usuario->update($id, $datosUsuario);
         }
         return $this->response->redirect(site_url('usuariosAdmin'));
+    }
+
+    public function mis_compras(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        $compra = new Compra();
+        $session = session();
+        $logUser = $session->get('usuario');
+        // var_dump($logUser['id']);
+        $datos['facturas'] = $compra->where('id_usuario', $logUser['id'])->findAll(); 
+        // var_dump($datos['facturas']);
+        return view('usuario/Mis_facturas.php', $datos);
     }
 }
