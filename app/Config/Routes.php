@@ -101,6 +101,8 @@ $routes->get('baja/(:num)', 'Usuarios::baja/$1');
 $routes->get('mensajes', 'Mensajes::listar');
 $routes->get('leido/(:num)', 'Mensajes::leido/$1');
 $routes->post('recepMensaje', 'Mensajes::mensajeContacto');
+//Facturas
+$routes->get('facturas', 'Admins::facturas');
 
 //Usuario
 $routes->get('mis-compras', 'Usuarios::mis_compras');
