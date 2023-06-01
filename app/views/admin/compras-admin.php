@@ -1,16 +1,17 @@
 <?=$cabecera?>
 <?php
 //espacio para pruebas
-// if($datos_compras != NULL){
+
 var_dump($prueba);
-// }
+// var_dump($datos_compras);
+
 ?>
 
 <div class="shadow p-3 my-5 mx-5 bg-body rounded conteiner text-center">
   <div class="conteiner text-center my-5">
   <form method="get" action="<?= base_url('facturas') ?>">
     <label for="fecha">Filtrar por fecha:</label>
-    <input type="date" id="fecha" name="fecha">
+    <input type="date" id="fecha" name="fecha" >
     <input type="submit" value="Filtrar">
   </form>
   </div>
@@ -19,8 +20,8 @@ var_dump($prueba);
       <tr>
           <th scope="col">#</th>
           <th scope="col">Total</th>
+          <th scope="col">Usuario</th>
           <th scope="col">Metodo de Pago</th>
-          <th scope="col">Numero de Tarjeta</th>
           <th scope="col">Cuotas</th>
           <th scope="col">Envio</th>
           <th scope="col">Direccion</th>
@@ -30,6 +31,7 @@ var_dump($prueba);
     </thead>
     <tbody>
       <?php 
+      
     //   var_dump($datos_compras);
     // if(datos_compras)  
     
@@ -37,10 +39,10 @@ var_dump($prueba);
         $total = number_format($cabeceraFactura['total'], 2, ',', '.');
         if($cabeceraFactura['metodo_pago'] == 1){
             $metodo = 'Efectivo / Cheque';
-            $tarjeta = 'No Corresponde';
+            
         }else{
             $metodo = 'Tarjeta Credito / Debito';
-            $tarjeta = '••••' . (substr($cabeceraFactura['numero_tarjeta'], -4)); 
+           
         }
         
         $fecha =  date("d-m-Y", strtotime($cabeceraFactura['fecha_alta']));
@@ -49,8 +51,21 @@ var_dump($prueba);
           <tr >
               <td><?=$cabeceraFactura['id'];?></td>
               <td>$<?=$total;?></td>
+              
+              <?php 
+                for($i=0; $i<count($usuarios); $i++){
+                  $dato = $usuarios[$i];
+                  if($dato['id'] == $cabeceraFactura['id_usuario']){ ?>
+                    
+                    <td><?=$dato['usuario']?></td>
+
+                   <?php
+                      }
+                    } 
+                ?>
+
+              
               <td><?=$metodo;?></td>
-              <td><?=$tarjeta?></td>
               <td><?=$cabeceraFactura['cuotas'];?></td>
               <td><?=$cabeceraFactura['envio'];?></td>
               <td><?=$cabeceraFactura['direccion'];?></td>

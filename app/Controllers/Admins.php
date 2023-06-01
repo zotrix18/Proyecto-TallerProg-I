@@ -4,6 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\Producto;
 use App\Models\Compra;
+use App\Models\Usuario;
 
 class Admins extends Controller{
 
@@ -31,13 +32,16 @@ class Admins extends Controller{
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');
         
-        $fecha = $this->request->getVar('fecha');
+        $fecha = $this->request->getVar('fecha'); //recepcion de fecha
         $compra = new Compra();
         $datos['prueba']=$fecha;
-       
+        
+        $usuarios = new Usuario();
+        $users = $usuarios->orderBy('id', 'ASC')->findAll();
+        $datos['usuarios'] = $users;
 
-        if ($fecha !=NULL) {
-            $compra->where('fecha_alta >=', $fecha);
+        if ($fecha !=NULL) { //filtra si recibe una fecha
+            $datos['datos_compras'] = $compra->where('fecha_alta =', $fecha)->findAll();
         }else{
             $datos['datos_compras'] = $compra->orderBy('id', 'ASC')->findAll(); 
         }

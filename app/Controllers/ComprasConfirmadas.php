@@ -112,12 +112,21 @@ class ComprasConfirmadas extends Controller{
     }
         
     public function comprobante($idCompra = NULL){
-        $datos['cabecera']= view('template/header.php');
+        $session = session();
+        $tipoUser = $session -> get('usuario');
+        
+
+        if($tipoUser['perfil_id'] == 2){
+            $datos['cabecera']= view('template/header-admin.php');
+        }else{
+            $datos['cabecera']= view('template/header.php');
+        }
+        
         $datos['pie']= view('template/footer.php');
         
         $compras = new Compra();
         $detComs = new DetCom();
-        $session = session();
+        
         $datos['id_compra'] = $idCompra;
         $datos['datos_compra'] = $compras->where('id', $idCompra)->first();
         $datos['detalle_compra'] = $detComs->where('id_compra', $idCompra)->findAll();
