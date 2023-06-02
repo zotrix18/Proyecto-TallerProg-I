@@ -11,8 +11,13 @@
   <div class="conteiner text-center my-5">
   <form method="get" action="<?= base_url('facturas') ?>">
     <label for="fecha">Filtrar por fecha:</label>
+    <div>Desde
     <input type="date" id="fecha" name="fecha" >
+    Hasta
+    <input type="date" id="fecha2" name="fecha2" >
     <input type="submit" value="Filtrar">
+    </div>
+    
   </form>
   </div>
   <table class="table table-bordered">

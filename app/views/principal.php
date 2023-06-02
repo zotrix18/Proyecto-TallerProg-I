@@ -1,4 +1,19 @@
 <?=$cabecera?>
+<?php
+
+//verifica que si el usuario ya ha iniciado sesion no acceda a esta parte
+if(session () ->has ('usuario')){
+  $session = session();
+  $log = $session->get('usuario');
+  
+  //si es admin, no puede acceder al panel principal, solo al panel admin
+  if($log['perfil_id'] == 2){
+    header("Location: " . base_url('inicio'));
+    exit();
+  }
+}
+
+?>
 
 <body>
   <section class="container-fluid p-0" id="home">

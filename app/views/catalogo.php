@@ -2,7 +2,21 @@
 <?php 
     $session=session();
     
-?>    
+
+    //verifica que si el usuario ya ha iniciado sesion no acceda a esta parte
+    if($session ->has ('usuario')){
+      $log = $session->get('usuario');
+      
+      //si es admin, no puede acceder al panel principal, solo al panel admin
+      if($log['perfil_id'] == 2){
+        header("Location: " . base_url('inicio'));
+        exit();
+      }
+    }
+    
+    ?>
+    
+   
 <div class="container shadow p-3 my-5 bg-body rounded">
   <?php $contador = 0; ?>
   <?php foreach ($productos as $producto) : ?>

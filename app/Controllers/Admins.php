@@ -33,6 +33,7 @@ class Admins extends Controller{
         $datos['pie']= view('template/footer.php');
         
         $fecha = $this->request->getVar('fecha'); //recepcion de fecha
+        $fecha2 = $this->request->getVar('fecha2'); //recepcion de fecha
         $compra = new Compra();
         $datos['prueba']=$fecha;
         
@@ -41,7 +42,9 @@ class Admins extends Controller{
         $datos['usuarios'] = $users;
 
         if ($fecha !=NULL) { //filtra si recibe una fecha
-            $datos['datos_compras'] = $compra->where('fecha_alta =', $fecha)->findAll();
+            $datos['datos_compras'] = $compra->where('fecha_alta >=', $fecha)
+                                             ->where('fecha_alta <=', $fecha2)
+                                             ->findAll();
         }else{
             $datos['datos_compras'] = $compra->orderBy('id', 'ASC')->findAll(); 
         }

@@ -1,5 +1,13 @@
 <?=$cabecera?> 
+<?php
 
+//verifica que si el usuario ya ha iniciado sesion no acceda a esta parte
+if(session () ->has ('usuario')){
+  header("Location: " . base_url('/'));
+  exit();
+}
+
+?>
 <body>
 <h2 class="text-center">¡Ponete en contacto con nosotros!</h2>
 <div class="container-fluid py-5 my-5">

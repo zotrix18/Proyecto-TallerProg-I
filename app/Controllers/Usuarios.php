@@ -35,8 +35,13 @@ class Usuarios extends Controller{
         }
         $id_user=$nick['perfil_id'];
         
-        $passs=$usuario->where('pass', $hashedPass)->first();
-        if($passs==$hashedPass){
+        if($nick['baja'] == 'si'){
+            $session=session();
+            $session->setFlashdata('mensaje','Usuario supendido');
+            return redirect()->back()->withInput();
+        }
+        
+        if($hashedPass != $nick['pass']){
             $session=session();
             $session->setFlashdata('mensaje','Contraseña incorrecta');
             return redirect()->back()->withInput();
