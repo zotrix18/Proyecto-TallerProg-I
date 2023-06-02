@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electro Voltaics S.A.</title>
-    <link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css')?>" integrity=" " crossorigin="">
-    <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
+    <link rel="stylesheet" href="/proyecto_quintana/public/assets/css/bootstrap.min.css" integrity=" " crossorigin="">
+    <script src="/proyecto_quintana/public/assets/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/proyecto_quintana/public/assets/css/styles.css">
-    <link rel="stylesheet" href="<?=base_url('assets/js/jquery.min.js')?>">
+    <!-- <link rel="stylesheet" href="proyecto_quintana/public/assets/js/jquery.min.js"> -->
 
     <?php
     $session=session();
@@ -101,7 +101,7 @@
             if (!($paginaActual === $paginaDeseada)) {
           ?>
                 <div class="text-center">
-                  <a class="text-dark" href="<?=site_url('login')?>">Logearse</a>    
+                  <a class="text-dark" href="<?=base_url('login')?>">Logearse</a>    
                 </div> 
             <?php
             } 
