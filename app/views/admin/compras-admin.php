@@ -2,7 +2,7 @@
 <?php
 //espacio para pruebas
 
-var_dump($prueba);
+// var_dump($prueba);
 // var_dump($datos_compras);
 
 ?>

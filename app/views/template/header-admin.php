@@ -28,7 +28,8 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="<?=site_url('productosAdmin')?>">Productos</a></li>    
             <li class="nav-item"><a class="nav-link" href="<?=site_url('usuariosAdmin')?>">Usuarios</a></li>            
-            <li class="nav-item"><a class="nav-link" href="<?=site_url('mensajes')?>">Mensajes</a></li>            
+            <li class="nav-item"><a class="nav-link" href="<?=site_url('contactos')?>">Contactos</a></li>            
+            <li class="nav-item"><a class="nav-link" href="<?=site_url('consultas')?>">Consultas</a></li>            
             <li class="nav-item"><a class="nav-link" href="<?=site_url('facturas')?>">Facturas</a></li>            
               </ul>
             </li>

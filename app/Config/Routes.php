@@ -66,13 +66,21 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 //rutas Sigin
 $routes->get('sigin', 'Usuarios::sigin');
 $routes->post('registrar', 'Usuarios::registrar');
+
 //rutas Login
 $routes->get('/login', 'Usuarios::login');
 $routes->post('iniciar', 'Usuarios::iniciar');
+
 //inicio Sesion
 $routes->get('logout', 'Usuarios::logout');
+
 //catalogo
 $routes->get('catalogo', 'Productos::listar');
+
+//Consultas
+$routes->get('consulta', 'Usuarios::consulta');
+$routes->post('mensajeConsulta', 'Contactos::mensajeConsulta');
+
 //Carrito
 $routes->get('agregarCarrito/(:num)', 'Compras::agregarCarrito/$1');
 $routes->get('carrito', 'Compras::carrito');
@@ -80,29 +88,45 @@ $routes->get('quitar/(:num)', 'Compras::quitarItemCarrito/$1');
 $routes->get('restar/(:num)', 'Compras::restar/$1');
 $routes->get('sumar/(:num)', 'Compras::sumar/$1');
 $routes->get('limpiar', 'Compras::limpiar');
+
 //Continuar Compra
 $routes->get('pago', 'Compras::pago');
+
 //procesamiento pago
 $routes->post('confirmarPago', 'ComprasConfirmadas::confirmarPago');
 $routes->get('procesando', 'ComprasConfirmadas::animacion');
 $routes->get('comprobante/(:num)', 'ComprasConfirmadas::comprobante/$1');
 
+//Comprobantes
+$routes->get('mis-compras', 'Usuarios::mis_compras');
+
+
+
 //Usuario Admin
 $routes->get('inicio', 'Admins::inicio');
+
 //CRUD productos
 $routes->get('productosAdmin', 'Admins::productosAdmin');
-$routes->get('añadir', 'Admins::añadir');
+;$routes->get('añadir', 'Admins::añadir');
 $routes->post('guardar', 'Productos::guardar');
 $routes->get('editar/(:num)', 'Productos::editar/$1');
+
 //Baja de usuario
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
 $routes->get('baja/(:num)', 'Usuarios::baja/$1');
-//Mensajes
-$routes->get('mensajes', 'Mensajes::listar');
-$routes->get('leido/(:num)', 'Mensajes::leido/$1');
-$routes->post('recepMensaje', 'Mensajes::mensajeContacto');
+1
+//Contactos
+;$routes->get('contactos', 'Mensajes::listar');
+$routes->get('contactoLeido/(:num)', 'Contactos::contactoLeido/$1');
+
+
+//Consultas
+$routes->get('consultas', 'Contactos::listar');
+$routes->get('leido/(:num)', 'Contactos::leido/$1');
+$routes->post('recepConsulta', 'Contactos::mensajeContacto');
+
 //Facturas
 $routes->get('facturas', 'Admins::facturas');
 
-//Usuario
-$routes->get('mis-compras', 'Usuarios::mis_compras');
+
+

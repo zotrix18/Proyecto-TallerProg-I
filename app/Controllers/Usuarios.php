@@ -161,4 +161,10 @@ class Usuarios extends Controller{
         // var_dump($datos['facturas']);
         return view('usuario/Mis_facturas.php', $datos);
     }
+
+    public function consulta(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+           return view('usuario/consulta.php', $datos);
+      }
 }
