@@ -52,6 +52,78 @@ class Productos extends Controller{
         return view('admin/editar-admin.php', $datos);
     }
 
+    public function actualizar(){
+          
+        $validacion= $this->validate([
+            'nombre'=>'required|min_length[3]',
+            'descripcion'=>'required|min_length[3]',
+            'precio'=>'required|greater_than[99]',
+            'stock' => 'required|greater_than[0]'
+        ]);
+
+
+        if(!$validacion){
+            $session=session();
+            $session->setFlashdata('mensaje','Revise la informacion');
+            return redirect()->back()->withInput();
+        }
+
+        $datos = [
+            'nombre' => $this->request->getVar('nombre'),
+            'descripcion'=> $this->request->getVar('descripcion'),
+            'precio'=> $this->request->getVar('precio'),
+            'stock' => $this->request->getVar('stock')
+         ];
+
+        $validacion= $this->validate([
+            'imagen'=>[
+                'uploaded[imagen]',
+                'mime_in[imagen,image/jpg,image/jpeg,image/png]',
+                'max_size[imagen,36000]', //esta en kb
+            ]
+        ]);
+
+        // var_dump($validacion);
+        $productos= new Producto();
+        $id=$this->request->getVar('id');
+        
+        if($validacion){
+            //Si se cambia la imagen
+            if ($imagen = $this->request->getFile('imagen')) {
+                echo 'hay img';
+
+                // desvinculacion de foto anterior
+                // $datosProducto=$productos->where('id',$id)->first();              
+                // $ruta=('uploads/'.$datosProducto['imagen']);
+                // unlink($ruta);
+
+                $nuevoNombre = $imagen->getRandomName();
+                $imagen->move('uploads/', $nuevoNombre);
+    
+                $datos = [
+                    'nombre' => $this->request->getVar('nombre'),
+                    'descripcion'=> $this->request->getVar('descripcion'),
+                    'precio'=> $this->request->getVar('precio'),
+                    'stock' => $this->request->getVar('stock'),
+                    'imagen' => $nuevoNombre
+                ];
+                
+                // var_dump($datos);
+                $productos->update($id, $datos);
+
+            }else{
+                $session=session();
+                $session->setFlashdata('mensaje','Tamaño excedido');
+                return redirect()->back()->withInput();
+                }
+            }else{
+            //Si no se cambia la imagen
+                $productos->update($id, $datos);
+                
+            }
+        return $this->response->redirect(site_url('productosAdmin'));
+    }
+
     public function listar(){
         $productos = new Producto();
         $datos['productos']= $productos->orderBy('id', 'ASC')->findAll();
@@ -60,3 +132,4 @@ class Productos extends Controller{
         return view('catalogo.php', $datos);
     }
 }
+

@@ -14,6 +14,10 @@
     $session=session();
     //variable q contiene los datos del usuario logeado
     $logSesion = $session->get('usuario');
+    if($logSesion['perfil_id']==1){
+        header("Location: " . base_url('/'));
+        exit();
+    }
     $nombre = $logSesion['nombre'];
     $apellido = $logSesion['apellido'];
     ?>

@@ -110,6 +110,7 @@ $routes->get('productosAdmin', 'Admins::productosAdmin');
 ;$routes->get('añadir', 'Admins::añadir');
 $routes->post('guardar', 'Productos::guardar');
 $routes->get('editar/(:num)', 'Productos::editar/$1');
+$routes->post('actualizar', 'Productos::actualizar');
 
 //Baja de usuario
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');

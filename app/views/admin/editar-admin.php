@@ -5,7 +5,7 @@
             <div class="card-body">
                 <h5 class="card-title">Ingresar Datos del producto:</h5>
                 <p class="card-text">
-                    <form method="post" action="" enctype="multipart/form-data">
+                    <form method="post" action="<?=site_url('/actualizar')?>" enctype="multipart/form-data">
 
                     <input type="hidden" name="id" value="<?=$producto['id']?>">
                         <div class="form-group">
@@ -25,7 +25,7 @@
                             value="<?=$producto['descripcion']?>" 
                             class="form-control" 
                             type="text" 
-                            name="nombre">
+                            name="descripcion">
                         </div>
 
                         <div class="form-group">
@@ -44,7 +44,7 @@
                             id="stock" 
                             value="<?=$producto['stock']?>" 
                             class="form-control" 
-                            type="text" 
+                            type="number" 
                             name="stock">
                         </div>
 
@@ -60,7 +60,7 @@
                             <input id="imagen" class="form-control my-4" type="file" name="imagen">
                         </div>
                     <div class="my-4 text-center">
-                        <button class="btn btn-success " type="subtmit">Guardar</button>
+                        <button class="btn btn-success" type="subtmit">Guardar</button>
                     </div>
                     </form>            
 

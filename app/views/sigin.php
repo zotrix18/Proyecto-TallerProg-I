@@ -1,5 +1,13 @@
 <?=$cabecera?>
-    
+<?php
+
+//verifica que si el usuario ya ha iniciado sesion no acceda a esta parte
+if(session () ->has ('usuario')){
+  header("Location: " . base_url('/'));
+  exit();
+}
+
+?>
 <div class="vh-100 d-flex align-items-center">
   <div class="container">
     <div class="row">
