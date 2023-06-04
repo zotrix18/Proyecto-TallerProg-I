@@ -50,7 +50,7 @@ class ComprasConfirmadas extends Controller{
                 $cuotas = $this->request->getVar('cuota');
                 $envio = $medio;
                 $direccion = $direccion;
-                $fecha = date('d-m-y');
+                $fecha = date('y-m-d');
 
                 }else{//es efectivo
                     $metodo_pago = 1;

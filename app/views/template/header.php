@@ -101,7 +101,7 @@
             if (!($paginaActual === $paginaDeseada)) {
           ?>
                 <div class="text-center">
-                  <a class="text-dark" href="<?=base_url('login')?>">Logearse</a>    
+                  <a class="text-dark fs-6" href="<?=base_url('login')?>">Iniciar Sesion</a>    
                 </div> 
             <?php
             } 

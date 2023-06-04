@@ -58,5 +58,4 @@ class Contactos extends Controller{
         }
     }
 
-    
 }

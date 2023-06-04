@@ -20,7 +20,7 @@ if(session () ->has ('usuario')){
             <p class="mb-0">Tel.: +54 3795334455</p>
         </div>
           <div class="col-sm-12 col-md-6 col-lg-7 border border-dark shadow p-3 mb-5 bg-body rounded">
-          <form action="<?=site_url('/recepMensaje')?>" enctype="multipart/form-data" method="post" class='mx-3 my-3'>
+          <form action="<?=site_url('/mensajeContacto')?>" enctype="multipart/form-data" method="post" class='mx-3 my-3'>
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" value="<?=old('nombre')?>" id="nombre" name="nombre" class="form-control border border-secondary "  required id="nombre" placeholder="Nombre completo">

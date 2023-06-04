@@ -63,6 +63,10 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 
 
 //usario comun
+
+//contacto
+$routes->post('mensajeContacto', 'Mensajes::mensajeContacto');
+
 //rutas Sigin
 $routes->get('sigin', 'Usuarios::sigin');
 $routes->post('registrar', 'Usuarios::registrar');
@@ -115,15 +119,15 @@ $routes->post('actualizar', 'Productos::actualizar');
 //Baja de usuario
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
 $routes->get('baja/(:num)', 'Usuarios::baja/$1');
-1
+
 //Contactos
 ;$routes->get('contactos', 'Mensajes::listar');
-$routes->get('contactoLeido/(:num)', 'Contactos::contactoLeido/$1');
+$routes->get('leido/(:num)', 'Mensajes::leido/$1');
 
 
 //Consultas
 $routes->get('consultas', 'Contactos::listar');
-$routes->get('leido/(:num)', 'Contactos::leido/$1');
+$routes->get('contactoLeido/(:num)', 'Contactos::contactoLeido/$1');
 $routes->post('recepConsulta', 'Contactos::mensajeContacto');
 
 //Facturas

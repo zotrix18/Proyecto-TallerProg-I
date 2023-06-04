@@ -20,7 +20,7 @@ class Mensajes extends Controller{
             'leido'=> '1'
         ];
         $mensajes->update($id, $mensajeleido);
-        return $this->response->redirect(site_url('mensajes'));
+        return $this->response->redirect(site_url('contactos'));
     }
 
     public function mensajeContacto(){

@@ -1,6 +1,17 @@
 <?=$cabecera?>
 <?php
     $session = session();
+    if($session -> has ('usuario')){
+        $log = $session->get('usuario');
+        //si es admin, no puede acceder al panel principal, solo al panel admin
+        if($log['perfil_id'] == 2){
+            header("Location: " . base_url('inicio'));
+            exit();
+        }
+    }else{
+        header("Location: " . base_url('/'));
+        exit();
+    }
     $counter = $session->get('cart_counter');
     $carrito2 = $session->get('carro');
     
