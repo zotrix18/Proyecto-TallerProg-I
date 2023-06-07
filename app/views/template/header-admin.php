@@ -31,6 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="<?=site_url('productosAdmin')?>">Productos</a></li>    
+            <li class="nav-item"><a class="nav-link" href="<?=site_url('categoriasAdmin')?>">Categorias</a></li>  
             <li class="nav-item"><a class="nav-link" href="<?=site_url('usuariosAdmin')?>">Usuarios</a></li>            
             <li class="nav-item"><a class="nav-link" href="<?=site_url('contactos')?>">Contactos</a></li>            
             <li class="nav-item"><a class="nav-link" href="<?=site_url('consultas')?>">Consultas</a></li>            

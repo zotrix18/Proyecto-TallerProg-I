@@ -22,6 +22,18 @@
                         <label for="precio">Precio:</label>
                         <input id="precio" required value="<?=old('precio')?>" class="form-control" type="number" name="precio">
                     </div>
+    
+                    <div class="form-group my-2">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" class="form-control" name="categoria" required>
+                            <option value="">Seleccione categoria</option>
+                            <option value="1">Bateria Moto</option>
+                            <option value="2">Bateria Auto</option>
+                            <option value="3">Bateria Estacionaria</option>
+                            <option value="4">Bateria Camion</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label for="imagen">Imagen:</label>
                         <input id="imagen" required class="form-control" type="file" name="imagen">

@@ -13,6 +13,7 @@
     <thead>
       <tr>
           <th scope="col">#</th>
+          <th scope="col">Categoria</th>
           <th scope="col">Nombre</th>
           <th scope="col">descripcion</th>
           <th scope="col">Precio</th>
@@ -23,9 +24,14 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach($productos as $producto):?>
-          <tr >
+      <?php foreach($productos as $producto):
+        
+          $cat = $categorias[($producto['id_categoria'] - 1)];
+        
+        ?>
+          <tr >      
               <td><?=$producto['id'];?></td>
+              <td><?=$cat['nombre'];?></td>
               <td><?=$producto['nombre'];?></td>
               <td><?=$producto['descripcion'];?></td>
               <td>$<?=$producto['precio'];?></td>

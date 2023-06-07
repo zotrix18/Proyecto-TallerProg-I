@@ -117,6 +117,11 @@ $routes->get('editar/(:num)', 'Productos::editar/$1');
 $routes->post('actualizar', 'Productos::actualizar');
 $routes->get('bajaProducto/(:num)', 'Admins::bajaProducto/$1');
 
+//CRUD Categorias
+$routes->get('categoriasAdmin', 'Admins::categoriasAdmin');
+$routes->get('bajaCategoria/(:num)', 'Admins::bajaCategoria/$1');
+$routes->get('editarCategoria/(:num)', 'Admins::editarCategoria/$1');
+
 //Baja de usuario
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
 $routes->get('baja/(:num)', 'Usuarios::baja/$1');

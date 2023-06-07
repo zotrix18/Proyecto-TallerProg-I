@@ -8,7 +8,13 @@ use App\Models\Categoria;
 class Productos extends Controller{
 
     public function guardar(){
-                
+        
+        $categoria = $this->request->getVar('categoria');
+        $nombre = $this->request->getVar('nombre');
+        $descripcion = $this->request->getVar('descripcion');
+        $stock = $this->request->getVar('stock');
+        $precio = $this->request->getVar('precio');
+        
         $validacion= $this->validate([
             'nombre'=>'required|min_length[3]',
             'descripcion'=>'required|min_length[3]',
@@ -35,10 +41,12 @@ class Productos extends Controller{
             $imagen->move('uploads/',$nuevoNombre);
 
             $datos = [
-                'nombre' => $this->request->getVar('nombre'),
-                'descripcion' => $this->request->getVar('descripcion'),
-                'stock' => $this->request->getVar('stock'),
-                'precio' => $this->request->getVar('precio'),
+                'id_categoria' => $categoria,
+                'nombre' => $nombre,
+                'descripcion' => $descripcion,
+                'stock' => $stock,
+                'precio' => $precio,
+                'baja' => 0,
                 'imagen' => $nuevoNombre];
             $producto->insert($datos);
         } 

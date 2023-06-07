@@ -5,6 +5,7 @@ use CodeIgniter\Controller;
 use App\Models\Producto;
 use App\Models\Compra;
 use App\Models\Usuario;
+use App\Models\Categoria;
 
 class Admins extends Controller{
 
@@ -16,7 +17,9 @@ class Admins extends Controller{
 
     public function productosAdmin(){
         $producto=new Producto();
+        $categoria = new Categoria();
         $datos['productos']=$producto->orderBy('id')->findAll();
+        $datos['categorias']=$categoria->orderBy('id')->findAll();
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');
         return view('admin/productos-admin.php', $datos);
@@ -68,5 +71,39 @@ class Admins extends Controller{
             $producto->update($id, $datosProducto);
         }
         return $this->response->redirect(site_url('productosAdmin'));
+    }
+
+    public function categoriasAdmin(){
+        $categoria = new Categoria();
+        $datos['cabecera']= view('template/header-admin.php');
+        $datos['pie']= view('template/footer.php');
+        $datos['categorias']=$categoria->orderBy('id')->findAll();
+        return view('admin/categorias-admin.php', $datos);
+    
+    }
+    
+    public function bajaCategoria($id=NULL){
+        $categoria = new Categoria();
+        $datoscategoria = $categoria->where('id', $id)->first();
+        if($datoscategoria ['baja'] == 0){
+            $datoscategoria=[
+                'baja'=> 1
+            ];
+            $categoria->update($id, $datoscategoria);
+        }else{
+            $datoscategoria=[
+                'baja'=> 0
+                ];
+            $categoria->update($id, $datoscategoria);
+        }
+        return $this->response->redirect(site_url('categoriasAdmin'));
+    }
+
+    public function editarCategoria($id=NULL){
+        $categoria = new Categoria();
+        $datos['categorias']=$categoria->orderBy('id', 'ASC')->findAll();
+        $datos['cabecera']= view('template/header-admin.php');
+        $datos['pie']= view('template/footer.php');
+        return view('admin/editarCategoria-admin.php', $datos);
     }
 }
