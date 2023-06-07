@@ -40,7 +40,7 @@ if(session () ->has ('usuario')){
                             <div class="col">
                             <div class="input-group">
                                 <span class="input-group-text">+</span>
-                                <input type="number" value="<?=old('prefijo')?>" id="prefijo" name="prefijo" class="form-control border border-secondary" required placeholder="Prefijo">
+                                <input type="number" value="<?=old('prefijo')?>" id="prefijo" name="prefijo" class="form-control border border-secondary" min="0" required placeholder="Prefijo">
                             </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ if(session () ->has ('usuario')){
                         <div class="col-sm-8 .col-11">
                         <div class="form-group">
                             <label for="telefono">Telefono</label>
-                            <input type="number" id="telefono" name="telefono" value="<?=old('telefono')?>" class="form-control border border-secondary" required placeholder="Numero telefono sin 015">
+                            <input type="number" id="telefono" name="telefono" value="<?=old('telefono')?>" class="form-control border border-secondary" min="0" required placeholder="Numero telefono sin 015">
                         </div>
                         </div>
                     </div>

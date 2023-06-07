@@ -53,4 +53,20 @@ class Admins extends Controller{
         return view('admin/compras-admin.php', $datos);
     }
    
+    public function bajaProducto($id=NULL){
+        $producto = new Producto();
+        $datosProducto = $producto->where('id', $id)->first();
+        if($datosProducto ['baja'] == 0){
+            $datosProducto=[
+                'baja'=> 1
+            ];
+            $producto->update($id, $datosProducto);
+        }else{
+            $datosProducto=[
+                'baja'=> 0
+                ];
+            $producto->update($id, $datosProducto);
+        }
+        return $this->response->redirect(site_url('productosAdmin'));
+    }
 }

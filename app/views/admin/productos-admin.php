@@ -19,6 +19,7 @@
           <th scope="col">Stock</th>
           <th scope="col">Imagen</th>
           <th scope="col">Acciones</th>
+          <th></th>
       </tr>
     </thead>
     <tbody>
@@ -37,7 +38,13 @@
               </td>
               <td> 
                   <a href="<?= base_url('editar/'.$producto['id']);?>" class="btn btn-info" type="button">Editar</a>
-                </td>
+              
+              <?php if($producto['baja'] == 0){ ?>
+                        <a class="btn btn-danger" href="<?=base_url('bajaProducto/' . $producto['id']);?>">Baja</a>
+                    <?php }else{?>
+                        <a class="btn btn-success" href="<?=base_url('bajaProducto/' . $producto['id']);?>">Alta</a>
+                    <?php }  ?>
+              </td>
           </tr>
           <?php endforeach;?>
     </tbody>

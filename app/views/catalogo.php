@@ -19,10 +19,12 @@
    
 <div class="container shadow p-3 my-5 bg-body rounded">
   <?php $contador = 0; ?>
-  <?php foreach ($productos as $producto) : ?>
-    <?php if ($contador % 4 == 0) { ?>
+  <?php foreach ($productos as $producto) : 
+    if($producto['baja'] != 1){
+     if ($contador % 4 == 0) { ?>
       <div class="row">
     <?php } ?>
+    
     
     <div class="col-md-3 col-sm-6 text-center my-3">
       <div class="card ">
@@ -38,8 +40,19 @@
             <p class="card-text"><?=$producto['descripcion']?></p>
             
             <?php 
-            if($session->has('usuario')){?>
+            if($session->has('usuario')){
+              if($producto['stock'] == 0){ ?>
+                <button class="btn btn-danger" type="button">SIN STOCK</button>
+              <?php 
+              } else { 
+              ?>
+              
                 <a href="<?= base_url('agregarCarrito/'.$producto['id']);?>" class="btn btn-success" type="button">Agregar al Carrito</a>
+              
+                <?php
+              }
+              ?>
+                
 
             <?php }?>
         </div>
@@ -50,7 +63,7 @@
     <?php $contador++; ?>
     <?php if ($contador % 4 == 0) { ?>
       </div>
-    <?php } ?>
+    <?php } } ?>
     
 <?php endforeach;?>
   

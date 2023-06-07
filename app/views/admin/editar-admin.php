@@ -48,6 +48,21 @@
                             name="stock">
                         </div>
 
+                        <div class="form-group my-3">
+                            <label for="categoria">Categoria:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccione categoria</option>
+                                <?php
+                                foreach ($categorias as $categoria) : ?>
+                                    <?php if ($categoria['id'] == $producto['id_categoria']) { ?>
+                                        <option value="<?=$categoria['id']?>" selected><?=$categoria['nombre']?></option>
+                                    <?php } else { ?>
+                                        <option value="<?=$categoria['id']?>"><?=$categoria['nombre']?></option>
+                                    <?php } ?>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
                         <div class="form-group pl-5 my-4 ">
                             <label for="imagen">Imagen:</label>
                             <div class="text-center">

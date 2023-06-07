@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\Producto;
+use App\Models\Categoria;
 
 class Productos extends Controller{
 
@@ -46,7 +47,9 @@ class Productos extends Controller{
     
     public function editar($id=NULL){
         $producto= new Producto();
+        $categoria = new Categoria();
         $datos['producto']=$producto->where('id', $id)->first();
+        $datos['categorias']=$categoria->orderBy('id', 'ASC')->findAll();
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');
         return view('admin/editar-admin.php', $datos);

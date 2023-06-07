@@ -115,6 +115,7 @@ $routes->get('productosAdmin', 'Admins::productosAdmin');
 $routes->post('guardar', 'Productos::guardar');
 $routes->get('editar/(:num)', 'Productos::editar/$1');
 $routes->post('actualizar', 'Productos::actualizar');
+$routes->get('bajaProducto/(:num)', 'Admins::bajaProducto/$1');
 
 //Baja de usuario
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
