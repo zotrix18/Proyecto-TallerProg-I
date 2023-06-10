@@ -101,9 +101,69 @@ class Admins extends Controller{
 
     public function editarCategoria($id=NULL){
         $categoria = new Categoria();
-        $datos['categorias']=$categoria->orderBy('id', 'ASC')->findAll();
+        $datos['categoria']=$categoria->where('id', $id)->first();
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');
         return view('admin/editarCategoria-admin.php', $datos);
+    }
+
+    public function actualizarCategoria(){
+        $validacion= $this->validate([
+            'nombre'=>'required|min_length[3]',
+        ]);
+
+
+        if(!$validacion){
+            $session=session();
+            $session->setFlashdata('mensaje','Revise la informacion');
+            return redirect()->back()->withInput();
+        }else{
+            $datos = [
+                'nombre' => $this->request->getVar('nombre')
+             ];
+    
+            $categoria= new Categoria();
+            $id=$this->request->getVar('id');
+            
+            $categoria->update($id, $datos);
+        }
+
+        
+        return $this->response->redirect(site_url('categoriasAdmin'));
+    }
+
+    public function añadirCategoria(){
+        $datos['cabecera']= view('template/header-admin.php');
+        $datos['pie']= view('template/footer.php');
+        return view('admin/añadirCat-admin.php', $datos);
+    }
+
+    public function guardarCategoria(){
+ 
+        $validacion= $this->validate([
+            'nombre'=>'required|min_length[3]',
+        ]);
+
+        if(!$validacion){
+            $session=session();
+            $session->setFlashdata('mensaje','Revise la informacion');
+            return redirect()->back()->withInput();
+        }else{
+            if($this->request->getVar('alta') == NULL){
+                $baja = 1;
+            }else{
+                $baja = 0;
+            }
+            $datos = [
+                'nombre' => $this->request->getVar('nombre'),
+                'baja' => $baja
+             ];
+    
+            $categoria= new Categoria();
+            $categoria->insert($datos);
+            
+        }
+
+        return $this->response->redirect(site_url('categoriasAdmin'));
     }
 }

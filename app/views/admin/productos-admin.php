@@ -9,7 +9,7 @@
 <div class="ml-5">
   <a class="text-light btn btn-success m-2" href="<?=base_url('/añadir')?>" >Añadir Producto</a>
 </div>
-  <table class="table">
+  <table class="table table-striped table-hover">
     <thead>
       <tr>
           <th scope="col">#</th>

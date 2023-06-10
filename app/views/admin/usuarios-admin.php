@@ -8,7 +8,7 @@
 <br>
 <br>
 <div class=" shadow p-3 mb-5 bg-body rounded conteiner text-center mx-5 my-5">
-    <table class="table">
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>

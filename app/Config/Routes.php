@@ -121,6 +121,9 @@ $routes->get('bajaProducto/(:num)', 'Admins::bajaProducto/$1');
 $routes->get('categoriasAdmin', 'Admins::categoriasAdmin');
 $routes->get('bajaCategoria/(:num)', 'Admins::bajaCategoria/$1');
 $routes->get('editarCategoria/(:num)', 'Admins::editarCategoria/$1');
+$routes->post('actualizarCategoria', 'Admins::actualizarCategoria');
+$routes->get('añadirCategoria', 'Admins::añadirCategoria');
+$routes->post('guardarCategoria', 'Admins::guardarCategoria');
 
 //Baja de usuario
 $routes->get('usuariosAdmin', 'Usuarios::listarUsuarios');
