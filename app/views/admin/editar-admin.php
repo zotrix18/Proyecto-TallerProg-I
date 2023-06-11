@@ -50,7 +50,7 @@
 
                         <div class="form-group my-3">
                             <label for="categoria">Categoria:</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="categoria">
                                 <option selected>Seleccione categoria</option>
                                 <?php
                                 foreach ($categorias as $categoria) : ?>

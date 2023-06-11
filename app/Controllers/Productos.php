@@ -8,7 +8,7 @@ use App\Models\Categoria;
 class Productos extends Controller{
 
     public function guardar(){
-        
+        $session=session();
         $categoria = $this->request->getVar('categoria');
         $nombre = $this->request->getVar('nombre');
         $descripcion = $this->request->getVar('descripcion');
@@ -29,7 +29,7 @@ class Productos extends Controller{
 
     
         if(!$validacion){
-            $session=session();
+            
             $session->setFlashdata('mensaje','Revise la informacion');
             return redirect()->back()->withInput();
         }
@@ -49,8 +49,10 @@ class Productos extends Controller{
                 'baja' => 0,
                 'imagen' => $nuevoNombre];
             $producto->insert($datos);
+            $session->setFlashdata('aviso','Añadido Correctamente');
         } 
-            return $this->response->redirect(site_url('productosAdmin'));
+
+    return $this->response->redirect(site_url('productosAdmin'));        
     }
     
     public function editar($id=NULL){
@@ -64,7 +66,7 @@ class Productos extends Controller{
     }
 
     public function actualizar(){
-          
+        $session=session();  
         $validacion= $this->validate([
             'nombre'=>'required|min_length[3]',
             'descripcion'=>'required|min_length[3]',
@@ -80,6 +82,7 @@ class Productos extends Controller{
         }
 
         $datos = [
+            'id_categoria' => $this->request->getVar('categoria'),
             'nombre' => $this->request->getVar('nombre'),
             'descripcion'=> $this->request->getVar('descripcion'),
             'precio'=> $this->request->getVar('precio'),
@@ -104,26 +107,21 @@ class Productos extends Controller{
                 echo 'hay img';
 
                 // desvinculacion de foto anterior
-                // $datosProducto=$productos->where('id',$id)->first();              
-                // $ruta=('uploads/'.$datosProducto['imagen']);
-                // unlink($ruta);
+                $datosProducto=$productos->where('id',$id)->first();              
+                $ruta=('uploads/'.$datosProducto['imagen']);
+                unlink($ruta);
 
                 $nuevoNombre = $imagen->getRandomName();
                 $imagen->move('uploads/', $nuevoNombre);
     
                 $datos = [
-                    'nombre' => $this->request->getVar('nombre'),
-                    'descripcion'=> $this->request->getVar('descripcion'),
-                    'precio'=> $this->request->getVar('precio'),
-                    'stock' => $this->request->getVar('stock'),
                     'imagen' => $nuevoNombre
                 ];
                 
-                // var_dump($datos);
                 $productos->update($id, $datos);
 
             }else{
-                $session=session();
+                
                 $session->setFlashdata('mensaje','Tamaño excedido');
                 return redirect()->back()->withInput();
                 }
@@ -132,12 +130,15 @@ class Productos extends Controller{
                 $productos->update($id, $datos);
                 
             }
+            $session->setFlashdata('aviso','Producto modificado correctamente');
         return $this->response->redirect(site_url('productosAdmin'));
     }
 
     public function listar(){
         $productos = new Producto();
+        $categoria = new Categoria();
         $datos['productos']= $productos->orderBy('id', 'ASC')->findAll();
+        $datos['categorias']= $categoria->orderBy('id', 'ASC')->findAll();
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');
         return view('catalogo.php', $datos);

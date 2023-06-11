@@ -16,10 +16,12 @@
         </div>
         
         <div id="divOpcion1" class="opcion-div" style="display: none;">
-            <div>
+            <div class="conteiner shadow-lg p-5 m-5 bg-body">
               <form method="post" action="<?=site_url('/confirmarPago')?>" enctype="multipart/form-data">
                 <p>Te esperamos en nuestro local de Av. Libertad 5289 de 8hs a 12hs y 17hs a 21hs, acercate con esta factura o con el numero de factura</p>
-                <button class="btn btn-success" type="submit">Confirmar Pago</button>
+                <div class="text-center">
+                  <button class="btn btn-success" type="submit">Confirmar Pago</button>
+                </div>
               </form>
             </div>
         </div>
@@ -28,13 +30,13 @@
             <div class="conteiner shadow-lg p-5 m-5 bg-body">
                 <form method="post" action="<?=site_url('/confirmarPago')?>" enctype="multipart/form-data">
                     <label for="tarjeta">Numero de tarjeta</label>
-                    <input type="number" maxlength="21" required value="<?=old('tarjeta')?>" class="mt-2 form-control" id="tarjeta" placeholder="Número de tarjeta" name="tarjeta">
+                    <input type="number" min="0" maxlength="21" required value="<?=old('tarjeta')?>" class="mt-2 form-control" id="tarjeta" placeholder="Número de tarjeta" name="tarjeta">
                 
                     <label for="fecha">Fecha de vencimiento (mm/yy)</label>
                     <input type="text" class="form-control" id="fecha" placeholder="mm/yy" name="fecha">
 
                     <label for="cvv">CVV</label>
-                    <input type="number" maxlength="21" required value="<?=old('cvv')?>" class="mt-2 form-control" id="cvv" placeholder="Número de cvv" name="cvv">
+                    <input type="number" min="0" maxlength="21" required value="<?=old('cvv')?>" class="mt-2 form-control" id="cvv" placeholder="Número de cvv" name="cvv">
 
                     <label for="cuota">Seleccione cuotas:</label>
                     <select class="form-select" id="cuota" name="cuota">
@@ -82,7 +84,9 @@
                     </div>
 
 
-                    <button class="btn btn-success" type="submit">Confirmar Pago</button>
+                    <div class="text-center mt-5">
+                  <button class="btn btn-success" type="submit">Confirmar Pago</button>
+                </div>
                 </form>
             </div>
         </div>

@@ -77,7 +77,9 @@
         <div class="conteiner">
             <div  class="row">
                 <div class="col-sm-4">
-
+                <div class="text-center my-3">
+                        <a href="<?= base_url('catalogo'); ?>"><button class="btn btn-success" type="button">Continuar comprando</button></a>
+                    </div>
                 </div>
 
                 <div class="col-sm-4">

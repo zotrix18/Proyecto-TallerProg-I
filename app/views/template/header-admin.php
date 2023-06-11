@@ -55,9 +55,23 @@
     <?php if(session('mensaje')){?>
 
     <div class="alert alert-danger text-center" role="alert">
-        <?php 
-            echo session('mensaje');
-        ?>
+    <p class="fs-5">
+      <?php 
+        echo session('mensaje');
+      ?>
+    </p>
+    </div>
+    <?php
+    }?>
+
+    <?php if(session('aviso')){?>
+
+    <div class="alert alert-success text-center" role="alert">
+    <p class="fs-5">
+      <?php 
+        echo session('aviso');
+      ?>
+    </p>
     </div>
     <?php
     }?>

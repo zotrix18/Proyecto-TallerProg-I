@@ -15,15 +15,37 @@
     }
     
     ?>
-    
+
    
 <div class="container shadow p-3 my-5 bg-body rounded">
+
+    
+  <div class="my-5 d-flex justify-content-end">
+    <form method="get" action="<?= base_url('catalogo') ?>" enctype="multipart/form-data">
+        <div class="text-center">
+            <label for="categoria">Filtrar por Categoría:</label>
+            </div>
+            <div class="d-flex align-items-center">
+            <select class="form-select mx-2" aria-label="Default select example" name="categoria">
+                <option selected>Seleccione categoría</option>
+                <?php foreach ($categorias as $categoria) : ?>
+                    <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
+                <?php endforeach; ?>
+            </select>
+            <button type="submit" class="btn btn-outline-success btn-sm">Filtrar</button>
+        </div>
+    </form>
+</div>
+
+
   <?php $contador = 0; ?>
   <?php foreach ($productos as $producto) : 
-    if($producto['baja'] != 1){
+    $estadoCat = $categorias[($producto['id_categoria'] - 1)];
+    if(!($producto['baja'] != 0 || $estadoCat['baja'] != 0)){
      if ($contador % 4 == 0) { ?>
       <div class="row">
     <?php } ?>
+    
     
     
     <div class="col-md-3 col-sm-6 text-center my-3">
@@ -71,7 +93,6 @@
     </div>
   <?php } ?>
 </div>
-
-
+<!-- 14:06 -->
 
 <?=$pie?> 

@@ -7,7 +7,7 @@ use App\Models\Producto;
 
 class Compras extends Controller{
 
-    public function agregarCarrito($id = NULL){
+    public function agregarCarrito($id = NULL){        
         $productos = new Producto();
         $seleccionProd = $productos->where('id', $id)->first();
         $session = session();
@@ -45,8 +45,6 @@ class Compras extends Controller{
             $cartKey = 'cart' . $i;
             $cartItem = $session->get($cartKey);
             $datos[$cartKey]=$cartItem;
-            // var_dump($cartKey);
-            // var_dump($datos[$cartKey]);
         }
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');
@@ -74,7 +72,22 @@ class Compras extends Controller{
         $item = $carrito2[$idCart];
 
         $seleccionProd = $productos->where('id', $item['id_producto'])->first();
-        $cant = ($item['cantidad'] +1 );      
+        $cant = ($item['cantidad'] +1 );
+
+
+        if($seleccionProd ['stock']< $cant){
+            $validacion = true;
+        }else{
+            $validacion = false;
+        }
+
+        if($validacion){
+            $session=session();
+            $session->setFlashdata('stock','No hay stock suficiente');
+            return $this->response->redirect(base_url('carrito'));
+        }
+
+              
         $compraMOD = [
             'id_producto' => $seleccionProd['id'],
             'nombre' => $seleccionProd['nombre'],

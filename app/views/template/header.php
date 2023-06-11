@@ -57,10 +57,9 @@
           
           <div class="text-end">
             <a href="http://localhost/proyecto_quintana/public/carrito"><img src="/proyecto_quintana/public/assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
-            <?php
-            if($cart_counter != 0 ){ ?>
-              <span>(<?=$cart_counter?>)</span>
-            <?php } ?>
+              
+
+            <span>(<?=$cart_counter?>)</span>
           </div>
        </div>
 
@@ -119,9 +118,11 @@
 <?php if(session('mensaje')){?>
 
 <div class="alert alert-danger text-center" role="alert">
-    <?php 
+<p class="fs-5">
+      <?php 
         echo session('mensaje');
-    ?>
+      ?>
+    </p>
 </div>
 
 
@@ -131,10 +132,29 @@
   <?php if(session('aviso')){?>
 
 <div class="alert alert-success text-center" role="alert">
-    <?php 
+<p class="fs-5">
+      <?php 
         echo session('aviso');
-    ?>
+      ?>
+    </p>
 </div>
+
+
+<?php
+}?>
+<?php if(session('stock')){?>
+
+  <div class="alert alert-danger text-center" role="alert">
+  <img class="mx-2 text-center" src="/proyecto_quintana/public/assets/svg/solid/triangle-exclamation.svg" alt="thumbail" width="1%">
+  
+    <p class="fs-5">
+      <?php 
+        echo session('stock');
+      ?>
+    </p>
+
+  </div>
+
 
 
 <?php
