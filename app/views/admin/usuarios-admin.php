@@ -8,6 +8,36 @@
 <br>
 <br>
 <div class=" shadow p-3 mb-5 bg-body rounded conteiner text-center mx-5 my-5">
+
+
+<div class="row align-items-center">
+
+        <div class="col-md-3 col-sm-6 ml-5 text-center"></div>
+
+        <div class="col-md-3 col-sm-6 text-center">
+            <form method="get" action="<?= base_url('usuariosAdmin') ?>" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Buscar por usuario" name="buscar_nombre">
+                    <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-3 col-sm-6 text-center px-5">
+
+            <form method="get" action="<?= base_url('usuariosAdmin') ?>" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                    <input type="number" min="0" class="form-control" placeholder="Buscar por ID" name="buscar_id">
+                    <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+
+
     <table class="table table-striped table-hover">
         <thead>
             <tr>

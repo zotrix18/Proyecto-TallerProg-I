@@ -131,7 +131,17 @@ class Usuarios extends Controller{
 
     public function listarUsuarios(){
         $usuario=new Usuario();
-        $datos['usuarios']=$usuario->orderBy('id', 'ASC')->findAll(); 
+        $buscarNombre = $this->request->getVar('buscar_nombre'); //recepcion de nombre
+        $buscarID = $this->request->getVar('buscar_id'); //recepcion de id
+
+        if(!empty($buscarNombre)){
+            $datos['usuarios'] = $usuario->like('usuario', $buscarNombre)->findAll();
+        }elseif(!empty($buscarID)){
+            $datos['usuarios'] = $usuario->where('id', $buscarID)->findAll();
+        }else{
+            $datos['usuarios']=$usuario->orderBy('id', 'ASC')->findAll(); 
+        }
+        
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');
         return view('admin/usuarios-admin', $datos);

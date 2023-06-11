@@ -6,19 +6,6 @@
     <a class="text-light btn btn-success m-2" href="<?=base_url('/añadirCategoria')?>" >Crear Categoria</a>
     </div>
 
-    <div>
-    <form method="get" action="" enctype="multipart/form-data">
-    <label for="categoria">Filtrar por Categoria</label>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    </form>
-
-    </div>
-
     <table class="table table-striped table-hover">
         <thead>
         <tr>
