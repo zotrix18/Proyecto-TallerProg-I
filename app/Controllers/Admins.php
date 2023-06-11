@@ -16,9 +16,22 @@ class Admins extends Controller{
     }
 
     public function productosAdmin(){
-        $producto=new Producto();
+        $productos=new Producto();
         $categoria = new Categoria();
-        $datos['productos']=$producto->orderBy('id')->findAll();
+        $categoriaSelec = $this->request->getVar('categoria'); //recepcion de categoria
+        $buscarNombre = $this->request->getVar('buscar_nombre');
+        $buscarID = $this->request->getVar('buscar_id');
+        
+
+        if(!empty($categoriaSelec)){
+            $datos['productos'] = $productos->where('id_categoria', $categoriaSelec)->findAll();
+        } elseif(!empty($buscarNombre)){
+            $datos['productos'] = $productos->like('nombre', $buscarNombre)->findAll();
+        }elseif(!empty($buscarID) ){
+            $datos['productos'] = $productos->where('id', $buscarID)->findAll();
+        }else{
+            $datos['productos'] = $productos->orderBy('id')->findAll();
+        }
         $datos['categorias']=$categoria->orderBy('id')->findAll();
         $datos['cabecera']= view('template/header-admin.php');
         $datos['pie']= view('template/footer.php');

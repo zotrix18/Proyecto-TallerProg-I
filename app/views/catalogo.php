@@ -18,23 +18,49 @@
 
    
 <div class="container shadow p-3 my-5 bg-body rounded">
-
+<h2 class="fs-1 text text-center fw-bold">Catálogo</h2>
     
-  <div class="my-5 d-flex justify-content-end">
-    <form method="get" action="<?= base_url('catalogo') ?>" enctype="multipart/form-data">
+<div class="row">
+
+  <div class="col-md-3 "></div>
+  <div class="col-md-3 "></div>
+  <div class="col-md-3 col-sm-6">
+    <form method="get" id="ordenarForm" action="<?= base_url('catalogo') ?>" enctype="multipart/form-data">
         <div class="text-center">
-            <label for="categoria">Filtrar por Categoría:</label>
+            <label for="categoria">Ordernar por:</label>
             </div>
             <div class="d-flex align-items-center">
-            <select class="form-select mx-2" aria-label="Default select example" name="categoria">
-                <option selected>Seleccione categoría</option>
-                <?php foreach ($categorias as $categoria) : ?>
-                    <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
-                <?php endforeach; ?>
+            <select class="form-select mx-2" id="ordenSelect" aria-label="Default select example" name="orden">
+            <option value="">Relevante</option>
+            <option value="1">Menor precio</option>
+            <option value="2">Mayor precio</option>                   
             </select>
             <button type="submit" class="btn btn-outline-success btn-sm">Filtrar</button>
         </div>
     </form>
+  </div>
+
+  <div class="col-md-3 col-sm-6">
+      <form method="get" action="<?= base_url('catalogo') ?>" enctype="multipart/form-data">
+          <div class="text-center">
+              <label for="categoria">Filtrar por Categoría:</label>
+              </div>
+              <div class="d-flex align-items-center">
+              <select class="form-select mx-2" aria-label="Default select example" name="categoria">
+                  <option value="" selected>Seleccione categoría</option>
+                  <?php foreach ($categorias as $categoria) : 
+                      if($categoria['baja'] != 1 ){ ?>
+                        <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
+                  <?php } ?>
+                      
+                  <?php endforeach; ?>
+              </select>
+              <button type="submit" class="btn btn-outline-success btn-sm">Filtrar</button>
+          </div>
+      </form>
+  </div>
+
+
 </div>
 
 

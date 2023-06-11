@@ -137,7 +137,18 @@ class Productos extends Controller{
     public function listar(){
         $productos = new Producto();
         $categoria = new Categoria();
-        $datos['productos']= $productos->orderBy('id', 'ASC')->findAll();
+        $categoriaSelec = $this->request->getVar('categoria'); //recepcion de categoria
+        $orden = $this->request->getVar('orden'); //recepcion de orden
+        if($categoriaSelec != NULL){
+            $datos['productos']= $productos->where('id_categoria', $categoriaSelec)->findAll();
+        }elseif($orden == 1){
+            $datos['productos']= $productos->orderBy('precio', 'ASC')->findAll();
+        }elseif($orden == 2){
+            $datos['productos']= $productos->orderBy('precio', 'DESC')->findAll();
+        }else{
+            $datos['productos']= $productos->orderBy('id', 'ASC')->findAll();
+        }
+        
         $datos['categorias']= $categoria->orderBy('id', 'ASC')->findAll();
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');

@@ -56,10 +56,12 @@
           </div>
           
           <div class="text-end">
-            <a href="http://localhost/proyecto_quintana/public/carrito"><img src="/proyecto_quintana/public/assets/svg/solid/cart-shopping.svg" width="15vw" alt="logo-cart"></a>
+            <a href="http://localhost/proyecto_quintana/public/carrito"><img src="/proyecto_quintana/public/assets/svg/solid/cart-shopping.svg" width="20vw" alt="logo-cart"></a>
               
-
-            <span>(<?=$cart_counter?>)</span>
+            <?php if($cart_counter>0){ ?>
+              <span>(<?=$cart_counter?>)</span>
+            <?php } ?>
+            
           </div>
        </div>
 
