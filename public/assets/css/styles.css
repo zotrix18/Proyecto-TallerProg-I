@@ -203,17 +203,37 @@ body{
 
 .sep{
     margin-right: 25vw!important;
+    min-width: 500px!important;
     margin-left: 25vw!important;
     margin-top: 6vw;
     margin-bottom: 6vw;
+}
+
+@media screen and (max-width: 700px) {
+    .sep {
+        margin-left: 10vw !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .sep {
+        margin-left: 3vw !important;
+    }
 }
 
 .stacked-box{
     text-align: center;
     position: relative;
     width: 15vw;
-    height: 4vw;
+    height: 5vw;
     margin-top: 2vw;
     margin-left: 10vw!important;
+
 }
 
+@media screen and (max-width: 990px) {
+    .stacked-box {
+        width: 40vw!important;
+        height: 10vw!important;
+    }
+}
