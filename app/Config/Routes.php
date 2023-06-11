@@ -106,7 +106,8 @@ $routes->get('mis-compras', 'Usuarios::mis_compras');
 
 //Cuenta
 $routes->get('micuenta', 'Usuarios::cuenta');
-
+$routes->get('edicionCuenta', 'Usuarios::edicionCuenta');
+$routes->post('actualizarCuenta', 'Usuarios::actualizarCuenta');
 
 
 

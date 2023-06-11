@@ -181,11 +181,32 @@ class Usuarios extends Controller{
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');
         return view('usuario/consulta.php', $datos);
-      }
+    }
 
     public function cuenta(){
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');
         return view('usuario/cuenta.php', $datos);
+    }
+
+    public function edicionCuenta(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        return view('usuario/cuentaEdicion.php', $datos);
+    
+    }
+
+    public function actualizarCuenta(){
+        $nombre = $this->request->getVar('nombre');
+        $apellido = $this->request->getVar('apellido');
+        $correo = $this->request->getVar('correo');
+        $usuario = $this->request->getVar('usuario');
+        $contraseña = $this->request->getVar('contraseña');
+
+        var_dump($nombre);
+        var_dump($apellido);
+        var_dump($correo);
+        var_dump($usuario);
+        var_dump($contraseña);
     }
 }

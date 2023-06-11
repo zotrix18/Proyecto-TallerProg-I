@@ -39,7 +39,7 @@ $usuario = $userData['usuario'];
         <input type="text" disabled class="form-control" value="•••••••••••••••••" aria-label="Username" aria-describedby="basic-addon1">
         </div>
         <div class="text-center">
-            <a href=""><button class="btn btn-success" type="button">Modificar Datos</button></a>
+            <a href="<?= base_url('edicionCuenta')?>"><button class="btn btn-success" type="button">Modificar Datos</button></a>
         </div>
     </div>
 </div>
