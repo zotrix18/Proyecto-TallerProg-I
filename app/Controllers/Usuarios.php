@@ -180,6 +180,12 @@ class Usuarios extends Controller{
     public function consulta(){
         $datos['cabecera']= view('template/header.php');
         $datos['pie']= view('template/footer.php');
-           return view('usuario/consulta.php', $datos);
+        return view('usuario/consulta.php', $datos);
       }
+
+    public function cuenta(){
+        $datos['cabecera']= view('template/header.php');
+        $datos['pie']= view('template/footer.php');
+        return view('usuario/cuenta.php', $datos);
+    }
 }

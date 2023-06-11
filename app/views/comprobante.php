@@ -38,14 +38,15 @@
 
     <div class="conteiner my-5">
         <div class="row">
-            <div class="col-lg-4 col-sm-11 border border-dark mx-3 my-4">
+            <div class="col-lg-12 col-xl-3 col-md-12 border border-dark mx-3 my-4">
                 <p>Electro Voltaics S.A.</p>
                 <p>Av. Libertad 5289</p>
                 <p>IVA Regimen Comun</p>
                 <p>No somos retenedores de IVA</p>
                 <p>Inicio de actividades: 28/05/2012</p>
             </div>
-            <div class="col-lg-2 col-sm-11 mt-5 border border-dark stacked-box">
+            
+            <div class="col-lg-12 col-xl-4 col-md-12 border border-dark stacked-box mWidth">
                <p class="text-light bg-dark">FACTURA NUMERO:</p> 
                <p>000000000342-<?=$id_compra?></p>
             </div>
@@ -61,7 +62,7 @@
                 <p>Apellido: <?=$logSession['apellido']?></p>
             </div>
             <div class="col-lg-1 col-sm-1"></div>
-            <div class="col-lg-6 col-sm-11 mx-3 my-4 border border-dark">
+            <div class="col-lg-5 col-sm-11 mx-3 my-4 border border-dark">
                 <p>Fecha: <?=$fecha?></p>
                 <p>Forma de pago: <?=$metodo?></p>
                 <?php
@@ -115,7 +116,7 @@
             <div class="conteiner">
                 <div class="row">
                     <div class="col-sm-4"></div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-3"></div>
                     <div class="col-sm-4">
                         <p class="fs-4  text-center ">TOTAL: $<?=$total?> </p>        
                     </div>

@@ -104,9 +104,15 @@ $routes->get('comprobante/(:num)', 'ComprasConfirmadas::comprobante/$1');
 //Comprobantes
 $routes->get('mis-compras', 'Usuarios::mis_compras');
 
+//Cuenta
+$routes->get('micuenta', 'Usuarios::cuenta');
+
+
+
 
 
 //Usuario Admin
+//inicio
 $routes->get('inicio', 'Admins::inicio');
 
 //CRUD productos

@@ -49,6 +49,7 @@
                   Hola <?=$nombre?>, <?=$apellido?>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="<?=site_url('micuenta')?>">Cuenta</a></li>
                   <li><a class="dropdown-item" href="<?=site_url('mis-compras')?>">Mis Facturas</a></li>
                   <li><a class="dropdown-item" href="<?=site_url('logout')?>">Salir</a></li>
                 </ul>
