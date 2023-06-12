@@ -197,16 +197,51 @@ class Usuarios extends Controller{
     }
 
     public function actualizarCuenta(){
+        $session=session();
+        $id = $this->request->getVar('id');
         $nombre = $this->request->getVar('nombre');
         $apellido = $this->request->getVar('apellido');
-        $correo = $this->request->getVar('correo');
-        $usuario = $this->request->getVar('usuario');
-        $contraseña = $this->request->getVar('contraseña');
+        $email = $this->request->getVar('correo');
+        $user = $this->request->getVar('usuario');
+        $password = $this->request->getVar('contraseña');
 
-        var_dump($nombre);
-        var_dump($apellido);
-        var_dump($correo);
-        var_dump($usuario);
-        var_dump($contraseña);
+        $validacion= $this->validate([
+            'nombre'=>'required|min_length[1]',
+            'apellido'=>'required|min_length[1]',
+            'correo'=>'required|min_length[1]',
+            'usuario'=>'required|min_length[1]' 
+        ]);
+
+        if ((strlen($password) < 5)) {
+            // La contraseña no cumple con la longitud mínima requerida
+            $session->setFlashdata('mensaje','La contraseña debe tener almenos 5 caracteres');
+            return redirect()->back()->withInput();
+        }
+       
+        if(!$validacion){
+            $session->setFlashdata('mensaje','Revise la informacion');
+            return redirect()->back()->withInput();
+        }
+
+        //se instancia el acceso a la bd a travez del modelo
+        $usuario = new Usuario();
+                        
+        $hashedPass = hash('sha256', $password);
+
+        $datos = [
+            'nombre' => $nombre,
+            'apellido'=> $apellido,
+            'email'=> $email,
+            'usuario'=> $user,
+            'pass'=> $hashedPass
+        ];
+
+        $usuario->update($id, $datos);
+        
+        $nick = $usuario->where('id', $id)->first();
+
+        $session->set('usuario', $nick);
+
+        return $this->response->redirect(site_url('/micuenta'));
     }
 }

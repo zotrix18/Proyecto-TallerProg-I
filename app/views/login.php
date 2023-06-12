@@ -23,13 +23,16 @@ if(session () ->has ('usuario')){
                 <input type="text" required value="<?=old('user')?>" class="mt-2 form-control" id="user" name="user" >
               </div>
 
-              <div class="mb-2">
-                <label for="pass">Contraseña</label>
-                <input type="password" required class="mt-2 form-control" id="pass" name="pass">
+              <div class="mb-2 input-group">
+                <label class="" for="pass">Contraseña</label>
+                <div class="input-group">
+                  <input type="password" required class="form-control" name="pass" id="inputPassword">
+                  <button type="button" class="btn btn-sm btn-outline-dark" id="togglePassword" onclick="togglePasswordField()">Mostrar</button>
+                </div>
               </div>
             
-              <div class="mb-2">
-                <button class="btn btn-lg btn-success w-100" type="submit">Iniciar Sesion</button>
+              <div class="mb-2 text-center">
+                <button class="btn btn-lg btn-success" type="submit">Iniciar Sesion</button>
               </div>
               
             </form>

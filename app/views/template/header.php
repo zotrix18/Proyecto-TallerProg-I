@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/proyecto_quintana/public/assets/css/bootstrap.min.css" integrity=" " crossorigin="">
     <script src="/proyecto_quintana/public/assets/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/proyecto_quintana/public/assets/css/styles.css">
-    <!-- <link rel="stylesheet" href="proyecto_quintana/public/assets/js/jquery.min.js"> -->
+    <script src="/proyecto_quintana/public/assets/js/MiJs.js"></script>
+    
 
     <?php
     $session=session();

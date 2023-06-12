@@ -6,6 +6,7 @@ if( !($session->has('usuario')) ){
     exit();
 }
 $userData = $session ->get ('usuario');
+$id = $userData['id'];
 $nombre = $userData['nombre'];
 $apellido = $userData['apellido'];
 $email = $userData['email'];
@@ -18,7 +19,10 @@ $usuario = $userData['usuario'];
     <div class="sep shadow-lg p-3 m-5 bg-body rounded row">
         <h2 class="m-4">Mis datos</h2>
 
-    <form method="post" action="actualizarCuenta" enctype="multipart/form-data">
+    <form method="post" action="<?=site_url('actualizarCuenta')?>" enctype="multipart/form-data">
+
+        <input type="hidden" name="id" value="<?=$id?>">
+
         <div class="input-group mb-3 col-md-6 col-sm-6">
             <span class="input-group-text" id="basic-addon1">Nombre</span>
             <input type="text" class="form-control" value="<?=$nombre?>" name="nombre">
@@ -38,11 +42,13 @@ $usuario = $userData['usuario'];
 
             <div class="input-group mb-3 col-md-6 col-sm-6">
             <span class="input-group-text" id="basic-addon1">Contraseña</span>
-            <input type="password" placeholder="••••••••••" class="form-control" name="contraseña">
+            <input type="password" placeholder="••••••••••" class="form-control" name="contraseña" id="inputPassword">
+            <button type="button" id="togglePassword" class="btn btn-sm btn-outline-dark" onclick="togglePasswordField()">Mostrar</button>
             </div>
-            <div class="text-center">
-                <a href="actualizarCuenta"><button class="btn btn-success" type="button">Guardar</button></a>
-        </div>
+
+            <div class="mb-2 text-center">
+                <button class="btn btn-success" type="submit" >Guardar</button>
+            </div> 
     </form>
 
         
@@ -51,6 +57,7 @@ $usuario = $userData['usuario'];
 <br>
 <br>
 <br>
+
 
 
 <?=$pie?>
