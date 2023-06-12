@@ -9,7 +9,8 @@ $userData = $session ->get ('usuario');
 $nombre = $userData['nombre'];
 $apellido = $userData['apellido'];
 $email = $userData['email'];
-$usuario = $userData['usuario'];
+$usuario = $userData['usuario']; 
+
 ?>
 <br>
 <br>
